@@ -19,3 +19,4 @@ browser = ftcommon.get_browser_instance()
 browser.get('http://localhost:8000')
 
 assert 'Django' in browser.title
+browser.close()
