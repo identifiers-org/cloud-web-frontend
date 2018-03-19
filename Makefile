@@ -30,6 +30,15 @@ install_requirements:
 	@python_install/bin/pip install pipreqs nose
 	@python_install/bin/pip install -r requirements.txt
 
+chromedriver: tmp bin/selenium
+	@echo "<===|DEVOPS|===> [INSTALL] Installing Google Chrome Driver"
+	@cd tmp; wget $(url_download_linux_chromedriver)
+	@cd tmp; wget $(url_download_mac_chromedriver)
+	@cd tmp; wget $(url_download_windows_chromedriver)
+	@cd tmp; unzip $(binary_linux_chromedriver); mv chromedriver ../bin/selenium/chromedriver-linux
+	@cd tmp; unzip $(binary_mac_chromedriver); mv chromedriver ../bin/selenium/chromedriver-mac
+	@cd tmp; unzip $(binary_windows_chromedriver); mv chromedriver.exe ../bin/selenium/.
+
 # Folders
 tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
