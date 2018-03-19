@@ -11,3 +11,7 @@
 Common environment file for running functional tests
 """
 
+__browser_profile_counter = 0
+
+
+
