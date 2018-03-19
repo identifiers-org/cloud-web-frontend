@@ -11,6 +11,9 @@ url_download_linux_chromedriver = $(url_base_chrome_driver)$(version_latest_chro
 url_download_mac_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_mac_chromedriver)
 url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_windows_chromedriver)
 
+all:
+	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
+
 install_requirements:
 	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
 	@python_install/bin/pip install pipreqs nose
