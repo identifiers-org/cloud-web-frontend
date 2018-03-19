@@ -33,3 +33,8 @@ class ConfigManagerException(Exception):
     def __str__(self):
         return repr(self.value)
 
+
+class ToolBoxException(AppException):
+    def __init__(self, value):
+        super().__init__(value)
+
