@@ -27,3 +27,7 @@ update_requirements_file: dev_environment
 
 tests: dev_environment
 	@echo "<===|DEVOPS|===> [TESTS] Running unit tests"
+
+clean_dev:
+	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning development environment"
+	@rm -rf python_install
