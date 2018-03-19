@@ -15,6 +15,10 @@ tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
 	@mkdir tmp
 
+bin:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating bin folder"
+	@mkdir bin
+
 dev_environment: python_install install_requirements
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
 
