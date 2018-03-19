@@ -45,10 +45,14 @@ clean_tmp:
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning temporary folder"
 	@rm -rf tmp
 
+clean_bin:
+	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning external binaries"
+	@rm -rf bin/*
+
 clean: clean_tmp
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning"
 
 clean_all: clean clean_dev
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning all environments"
 
-.PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean
+.PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean_bin clean
