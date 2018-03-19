@@ -27,5 +27,6 @@ def get_browser_instance():
     logger = config_manager.get_app_config_manager().get_logger_for("{}.{}".format(__name__, "get_browser_instance"))
     folder_prefix = os.path.join(config_manager.get_app_config_manager().get_session_working_dir(),
                                  "browser_profile_no")
+    profile_folder = "{}{}".format(folder_prefix, uuid.uuid4())
 
 
