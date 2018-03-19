@@ -4,6 +4,7 @@
 # Environment
 version_latest_chrome_driver = 2.35
 url_base_chrome_driver = http://chromedriver.storage.googleapis.com/
+binary_linux_chromedriver = chromedriver_linux64.zip
 
 install_requirements:
 	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
