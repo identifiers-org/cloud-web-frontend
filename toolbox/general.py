@@ -31,3 +31,19 @@ def read_json(json_file="json_file_not_specified.json"):
     with open(json_file) as jf:
         return json.load(jf)
 
+
+def check_create_folders(folders):
+    """
+    Check if folders exist, create them otherwise
+    :param folders: list of folder paths to check
+    :return: no return value
+    """
+    for folder in folders:
+        if not os.path.exists(folder):
+            try:
+                os.makedirs(folder)
+            except Exception as e:
+                raise ToolBoxException(str(e))
+        else:
+            if not os.path.isdir(folder):
+                raise ToolBoxException("'{}' is not a folder".format(folder))
