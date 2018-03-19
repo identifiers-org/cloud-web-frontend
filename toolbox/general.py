@@ -101,3 +101,50 @@ def create_latest_symlink_overwrite(destination_path):
     os.symlink(destination_path, symlink_path)
 
 
+def gunzip_files(files):
+    """
+    Given a list of paths for Gzip compressed files, this method will uncompress them, returning a list with the files
+    that could not be gunzipped and the reason why that happened
+    :param files: list of paths to files that will be un-compressed
+    :return: a list of possible failing to uncompress files
+    """
+    gunzip_command_template = "gunzip {}"
+    files_with_error = []
+    for file in files:
+        if os.path.isfile(file):
+            try:
+                gunzip_subprocess = subprocess.Popen(gunzip_command_template.format(file),
+                                                     stdout=subprocess.PIPE,
+                                                     stderr=subprocess.PIPE,
+                                                     shell=True)
+                # Timeout, in seconds, is either 10 seconds or the size of the file in MB * 10, e.g. 1MB -> 10 seconds
+                file_size_mb = os.path.getsize(file) / (1024 * 1024)
+                timeout = max(10, int(file_size_mb))
+                (stdout, stderr) = gunzip_subprocess.communicate(timeout=timeout)
+                if gunzip_subprocess.poll() is not None:
+                    if gunzip_subprocess.returncode != 0:
+                        # ERROR - Report this
+                        err_msg = "ERROR decompressing file '{}' output from subprocess STDOUT: {}\nSTDERR: {}" \
+                            .format(file, stdout.decode('utf8'), stderr.decode('utf8'))
+                        files_with_error.append((file, err_msg))
+            except subprocess.TimeoutExpired as e:
+                err_msg = "TIMEOUT ERROR decompressing file '{}', size {}MB, given timeframe of '{}seconds', output " \
+                          "from subprocess STDOUT: {}\nSTDERR: {}" \
+                    .format(file_size_mb,
+                            timeout,
+                            file,
+                            stdout.decode('utf8'),
+                            stderr.decode('utf8'))
+                files_with_error.append((file, err_msg))
+            except Exception as e:
+                err_msg = "UNKNOWN ERROR decompressing file '{}' ---> {}\nOutput from subprocess " \
+                          "STDOUT: {}\nSTDERR: {}" \
+                    .format(file,
+                            e,
+                            stdout.decode('utf8'),
+                            stderr.decode('utf8'))
+                files_with_error.append((file, err_msg))
+        else:
+            files_with_error.append((file, "it IS NOT A FILE"))
+    return files_with_error
+
