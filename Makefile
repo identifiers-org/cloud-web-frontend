@@ -41,3 +41,5 @@ clean: clean_tmp
 
 clean_all: clean clean_dev
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning all environments"
+
+.PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean
