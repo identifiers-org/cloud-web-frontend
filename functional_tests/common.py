@@ -28,7 +28,8 @@ def get_browser_instance():
     folder_prefix = os.path.join(config_manager.get_app_config_manager().get_session_working_dir(),
                                  "browser_profile_no")
     profile_folder = "{}{}".format(folder_prefix, uuid.uuid4())
-    general_toolbox.check_create_folders_overwrite([profile_folder])
+    general_toolbox.check_create_folders([profile_folder])
     logger.debug("Creating Browser instance, profile folder at '{}'".format(profile_folder))
-
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--headless")
 
