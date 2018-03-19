@@ -24,3 +24,6 @@ install: dev_environment
 update_requirements_file: dev_environment
 	@echo "<===|DEVOPS|===> [REQUIREMENTS] Updating requirements file"
 	@python_install/bin/pipreqs --use-local --savepath requirements.txt $(PWD)
+
+tests: dev_environment
+	@echo "<===|DEVOPS|===> [TESTS] Running unit tests"
