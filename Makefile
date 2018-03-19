@@ -48,6 +48,10 @@ bin:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating bin folder"
 	@mkdir bin
 
+run:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating 'run' folder"
+	@mkdir run
+
 bin/selenium: bin
 	@echo "<===|DEVOPS|===> [FOLDER] Preparing selenium folder for binaries"
 	@mkdir -p bin/selenium
