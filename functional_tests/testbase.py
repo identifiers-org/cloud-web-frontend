@@ -11,3 +11,11 @@
 This is just an initial test that I'll use when creating the django application to make sure things are in place, I will
 remove it in the future, because it will stop passing.
 """
+
+# Application imports
+import functional_tests.common as ftcommon
+
+browser = ftcommon.get_browser_instance()
+browser.get('http://localhost:8000')
+
+assert 'Django' in browser.title
