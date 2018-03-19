@@ -19,6 +19,10 @@ bin:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating bin folder"
 	@mkdir bin
 
+bin/selenium: bin
+	@echo "<===|DEVOPS|===> [FOLDER] Preparing selenium folder for binaries"
+	@mkdir -p bin/selenium
+
 dev_environment: python_install install_requirements
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
 
