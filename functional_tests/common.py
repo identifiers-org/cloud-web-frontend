@@ -18,7 +18,6 @@ from selenium import webdriver
 import config_manager
 import toolbox.general as general_toolbox
 
-
 # Some globals
 __browser_profile_counter = 0
 
@@ -34,4 +33,8 @@ def get_browser_instance():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument("user-data-dir={}".format(profile_folder))
-
+    browser = webdriver.Chrome(
+        executable_path=config_manager.get_app_config_manager().get_path_chrome_driver(),
+        chrome_options=chrome_options)
+    browser.implicitly_wait(3)
+    return browser
