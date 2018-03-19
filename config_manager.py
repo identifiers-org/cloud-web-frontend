@@ -22,6 +22,10 @@ import importlib
 from toolbox import general
 from exceptions import AppConfigException, ConfigManagerException
 
+# Defaults
+__DEFAULT_CONFIG_FILE = "config_default.json"
+
+
 # Application defaults - NORMAL OPERATION MODE
 _folder_bin = os.path.abspath('bin')
 _folder_config = os.path.abspath('config')
@@ -31,7 +35,7 @@ _folder_resources = os.path.abspath('resources')
 _folder_run = os.path.abspath('run')
 
 # Configuration file name
-__configuration_file_name = None
+__configuration_file_name = __DEFAULT_CONFIG_FILE
 # Configuration Singleton
 __app_config_manager = None
 
