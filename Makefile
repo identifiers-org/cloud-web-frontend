@@ -1,5 +1,8 @@
 # Makefile helper
-# author: Manuel Bernal Llinares <mbdebian@gmail.com>
+# Author: Manuel Bernal Llinares <mbdebian@gmail.com>
+
+# Environment
+version_latest_chrome_driver = 2.35
 
 install_requirements:
 	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
