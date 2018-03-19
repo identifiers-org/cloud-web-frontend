@@ -8,5 +8,5 @@
 # 
 
 """
-Document your module here
+Common environment file for running functional tests
 """
