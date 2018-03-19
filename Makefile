@@ -31,3 +31,7 @@ tests: dev_environment
 clean_dev:
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning development environment"
 	@rm -rf python_install
+
+clean_tmp:
+	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning temporary folder"
+	@rm -rf tmp
