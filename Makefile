@@ -10,3 +10,7 @@ python_install:
 	@echo "<===|DEVOPS|===> [INSTALL] Preparing Python Virtual Environment"
 	@pip install --upgrade --user virtualenv
 	@virtualenv -p `which python3` python_install
+
+tmp:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
+	@mkdir tmp
