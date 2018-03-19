@@ -52,6 +52,7 @@ update_requirements_file: dev_environment
 tests: dev_environment
 	@echo "<===|DEVOPS|===> [TESTS] Running unit tests"
 
+# Housekeeping
 clean_dev:
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning development environment"
 	@rm -rf python_install
@@ -69,5 +70,6 @@ clean: clean_tmp
 
 clean_all: clean clean_dev
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning all environments"
+# END - Housekeeping
 
 .PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean_bin clean
