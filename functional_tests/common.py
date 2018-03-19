@@ -18,9 +18,6 @@ from selenium import webdriver
 import config_manager
 import toolbox.general as general_toolbox
 
-# Some globals
-__browser_profile_counter = 0
-
 
 def get_browser_instance():
     logger = config_manager.get_app_config_manager().get_logger_for("{}.{}".format(__name__, "get_browser_instance"))
