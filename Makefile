@@ -35,3 +35,6 @@ clean_dev:
 clean_tmp:
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning temporary folder"
 	@rm -rf tmp
+
+clean: clean_tmp
+	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning"
