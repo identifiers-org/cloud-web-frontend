@@ -7,6 +7,7 @@ url_base_chrome_driver = http://chromedriver.storage.googleapis.com/
 binary_linux_chromedriver = chromedriver_linux64.zip
 binary_mac_chromedriver = chromedriver_mac64.zip
 binary_windows_chromedriver = chromedriver_win32.zip
+url_download_linux_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_linux_chromedriver)
 
 install_requirements:
 	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
