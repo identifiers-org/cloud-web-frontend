@@ -14,15 +14,21 @@ url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_ch
 all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
 
-install_requirements:
-	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
-	@python_install/bin/pip install pipreqs nose
-	@python_install/bin/pip install -r requirements.txt
+install: dev_environment
+	@echo "<===|DEVOPS|===> [INSTALL] Platform"
+
+dev_environment: python_install install_requirements
+	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
 
 python_install:
 	@echo "<===|DEVOPS|===> [INSTALL] Preparing Python Virtual Environment"
 	@pip install --upgrade --user virtualenv
 	@virtualenv -p `which python3` python_install
+
+install_requirements:
+	@echo "<===|DEVOPS|===> [INSTALL] Installing platform requirements"
+	@python_install/bin/pip install pipreqs nose
+	@python_install/bin/pip install -r requirements.txt
 
 tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
@@ -35,12 +41,6 @@ bin:
 bin/selenium: bin
 	@echo "<===|DEVOPS|===> [FOLDER] Preparing selenium folder for binaries"
 	@mkdir -p bin/selenium
-
-dev_environment: python_install install_requirements
-	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
-
-install: dev_environment
-	@echo "<===|DEVOPS|===> [INSTALL] Platform"
 
 update_requirements_file: dev_environment
 	@echo "<===|DEVOPS|===> [REQUIREMENTS] Updating requirements file"
