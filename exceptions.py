@@ -24,3 +24,12 @@ class AppConfigException(AppException):
     def __init__(self, value):
         super().__init__(value)
 
+
+class ConfigManagerException(Exception):
+    def __init__(self, value):
+        Exception.__init__(self)
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
