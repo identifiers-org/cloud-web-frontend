@@ -53,7 +53,7 @@ bin/selenium: bin
 	@mkdir -p bin/selenium
 # END - Folders
 
-update_requirements_file: dev_environment
+update_requirements_file:
 	@echo "<===|DEVOPS|===> [REQUIREMENTS] Updating requirements file"
 	@#python_install/bin/pipreqs --use-local --savepath requirements.txt $(PWD)
 	@python_install/bin/pip freeze > requirements.txt
