@@ -17,7 +17,7 @@ all:
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
 
-dev_environment: python_install install_requirements
+dev_environment: python_install install_requirements chromedriver
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
 
 python_install:
