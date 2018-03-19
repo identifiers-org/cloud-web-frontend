@@ -8,5 +8,5 @@
 # 
 
 """
-Document your module here
+Initial unit test for checking the infrastructure
 """
