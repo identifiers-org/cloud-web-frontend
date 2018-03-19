@@ -30,6 +30,7 @@ install_requirements:
 	@python_install/bin/pip install pipreqs nose
 	@python_install/bin/pip install -r requirements.txt
 
+# Folders
 tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
 	@mkdir tmp
@@ -41,6 +42,7 @@ bin:
 bin/selenium: bin
 	@echo "<===|DEVOPS|===> [FOLDER] Preparing selenium folder for binaries"
 	@mkdir -p bin/selenium
+# END - Folders
 
 update_requirements_file: dev_environment
 	@echo "<===|DEVOPS|===> [REQUIREMENTS] Updating requirements file"
