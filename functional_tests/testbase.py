@@ -8,6 +8,6 @@
 # 
 
 """
-Initial unit test for checking the infrastructure
+This is just an initial test that I'll use when creating the django application to make sure things are in place, I will
+remove it in the future, because it will stop passing.
 """
-
