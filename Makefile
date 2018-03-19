@@ -17,3 +17,6 @@ tmp:
 
 dev_environment: python_install install_requirements
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Preparing development environment"
+
+install: dev_environment
+	@echo "<===|DEVOPS|===> [INSTALL] Platform"
