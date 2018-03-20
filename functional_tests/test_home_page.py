@@ -25,4 +25,6 @@ class MainLandingPage(unittest.TestCase):
         self.browser.quit()
 
     def test_main_landing_page_content(self):
-        pass
+        self.browser.get('http://localhost:8000')
+        self.assertIn('Identifiers.org', self.browser.title)
+        # TODO - complete this test
