@@ -60,6 +60,7 @@ var AppSearchHomePageGlue = (function () {
         that = this;
         document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
             event.preventDefault();
+            resolutionResultsController.reset();
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
@@ -68,8 +69,9 @@ var AppSearchHomePageGlue = (function () {
                         location.replace(resolvedResources[0].accessUrl);
                     }
                     // TODO - Tell the Resolved Resource display to show the options
+                    resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
-            });
+            }, that.getInputCompactId());
             console.debug("Resolve Button CLICKED");
             return false;
         });
@@ -107,10 +109,12 @@ var AppSearchHomePageGlue = (function () {
 
     ResolutionResultsController.prototype.showResolutionDataSet = function (resolvedResources) {
         // TODO
+        console.debug("ResolutionResultsController - asked to show " + resolvedResources.length + " Resolved Resources");
     };
 
     ResolutionResultsController.prototype.reset = function () {
         // TODO
+        console.debug("Reset Resolved Resources results display");
     };
     // END --- Resolution Results Controller
 
