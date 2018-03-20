@@ -50,7 +50,8 @@ var AppSearchHomePageGlue = (function () {
                     resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
                     console.debug("Redirecting to Resolved Resource");
                     printResolvedResource(resolvedResource);
-                    // TODO - Redirect
+                    // TODO - Perfect place for metrics collection
+                    location.replace(resolvedResource.accessUrl);
                 }
             }, that.getInputCompactId());
             console.debug("I'm gonna be lucky CLICKED");
