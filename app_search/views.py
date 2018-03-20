@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -10,9 +11,9 @@ def home_page(request):
 
 
 def resolve(request, compact_id):
-    return "Resolution request received for Compact ID {}".format(compact_id)
+    return HttpResponse("Resolution request received for Compact ID {}".format(compact_id))
 
 
 def resolve_with_selector(request, selector, compact_id):
-    return "Resolution request received for Compact ID {}, using selector {}".format(compact_id, selector)
+    return HttpResponse("Resolution request received for Compact ID {}, using selector {}".format(compact_id, selector))
 
