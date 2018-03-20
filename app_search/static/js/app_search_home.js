@@ -13,10 +13,12 @@ var AppSearchHomePageGlue = (function () {
         console.debug("Initialize page Javascript...")
     }
 
-    function resultsMediator(divId) {
+    function ResultsMediator(divId) {
         // TODO
         this.divId = divId;
     }
+
+    
 
     return {
         init: initPage
