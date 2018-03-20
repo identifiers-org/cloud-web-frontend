@@ -18,7 +18,13 @@ var AppSearchHomePageGlue = (function () {
         this.divId = divId;
     }
 
-    
+    ResultsMediator.prototype.showResolutionDataSet = function(dataset) {
+        // TODO
+    };
+
+    ResultsMediator.prototype.reset = function () {
+        // TODO
+    };
 
     return {
         init: initPage
