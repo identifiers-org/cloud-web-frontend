@@ -109,6 +109,7 @@ var AppSearchHomePageGlue = (function () {
     ResolutionResultsController.prototype.showResolutionDataSet = function (resolvedResources) {
         // TODO
         console.debug("ResolutionResultsController - asked to show " + resolvedResources.length + " Resolved Resources");
+        // TODO - Perfect place for metrics collection by inserting extra code in the displayed URL links
     };
 
     ResolutionResultsController.prototype.reset = function () {
