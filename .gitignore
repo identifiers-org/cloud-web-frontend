@@ -4,3 +4,4 @@ bin
 tmp
 logs
 run
+**/__pycache__
