@@ -8,6 +8,7 @@
  */
 var AppSearchHomePageGlue = (function () {
     // TODO
+    var resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
     var resolutionRequestController;
     var resolutionResultsController;
     var messageBannerController;
@@ -80,10 +81,9 @@ var AppSearchHomePageGlue = (function () {
 
     // Resolution Helper
     function getResolvedResources(callback, compactId, selector) {
-        resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
         resolver.resolve(function (response) {
             // TODO
-            if response.httpStatus !== 200) {
+            if (response.httpStatus !== 200) {
                 // TODO - Handle the error
                 console.error("ERROR RESPONSE FROM THE RESOLVER, TODO HANDLER");
             }
