@@ -38,6 +38,10 @@ var AppSearchHomePageGlue = (function () {
         document.getElementById(btnLuckyId).addEventListener("click", this.clickBtnLucky);
     }
 
+    ResolutionRequestController.prototype.getTypedCompactId = function () {
+        // TODO
+    };
+
     ResolutionRequestController.prototype.clickBtnLucky = function (event) {
         event.preventDefault();
         // TODO
