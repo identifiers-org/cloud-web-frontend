@@ -10,3 +10,12 @@
 """
 Resolution / Search application specific URL routing
 """
+
+from django.urls import path, re_path
+from app_search import views as app_search_views
+
+urlpatterns = [
+    path('', app_search_views.home_page, name='resolution_home'),
+    re_path('^(?P<selector>.+)/(?P<compact_id>.+)$', app_search_views.resolve_with_selector),
+    re_path('^(?P<compact_id>.+)$', app_search_views.resolve),
+]
