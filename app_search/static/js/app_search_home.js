@@ -6,7 +6,7 @@
  *
  * Javascript glue for the resolution page.
  */
-var AppSearchHomePageGlue = (function() {
+var AppSearchHomePageGlue = (function () {
     // TODO
     function init_page() {
         console.debug("Initialize page Javascript...")
@@ -18,6 +18,6 @@ var AppSearchHomePageGlue = (function() {
 })();
 
 // Set up everything.
-window.onload(function() {
+window.onload = function () {
     AppSearchHomePageGlue.init();
-});
+};
