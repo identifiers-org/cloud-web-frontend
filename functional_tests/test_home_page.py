@@ -11,7 +11,6 @@
 Acceptance test for the home page, which is the main landing page of the website.
 """
 
-import unittest
 from django.test import LiveServerTestCase
 # Application imports
 import functional_tests.common as ftcommon
@@ -30,6 +29,3 @@ class MainLandingPage(LiveServerTestCase):
         self.assertIn('Identifiers.org', self.browser.title)
         # TODO - complete this test
 
-
-if __name__ == '__main__':
-    unittest.main(warnings='ignore')
