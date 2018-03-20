@@ -7,7 +7,8 @@
  * Javascript glue for the resolution page.
  */
 var AppSearchHomePageGlue = (function () {
-    // TODO
+    // To simplify things, as all these components are not generic, they are going to be coupled, and I'll save a lot of
+    // coding on event producers and consumers, as well as a big mediator.
     var resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
     var resolutionRequestController;
     var resolutionResultsController;
