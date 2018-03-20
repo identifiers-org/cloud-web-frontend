@@ -16,3 +16,5 @@ import unittest
 import functional_tests.common as ftcommon
 
 
+class MainLandingPage(unittest.TestCase):
+    pass
