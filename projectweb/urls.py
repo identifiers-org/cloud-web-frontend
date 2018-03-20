@@ -20,5 +20,6 @@ from app_search import views as app_search_views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', app_search_views.home_page, name='resolution_home'),
+    re_path('^(?P<selector>.+)/(?P<compact_id>.+)$', app_search_views.resolve_with_selector),
     re_path('^(?P<compact_id>.+)$', app_search_views.resolve),
 ]
