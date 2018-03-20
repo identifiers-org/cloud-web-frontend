@@ -7,7 +7,7 @@ from django.db import models
 class HomePage:
     @staticmethod
     def get_resolver_host_and_port():
-        pass
+        return ResolutionServiceLocationFactory.get_resolver_host_and_port()
 
 
 class ResolutionServiceLocationFactory:
