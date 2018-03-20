@@ -11,12 +11,12 @@
 Acceptance test for the home page, which is the main landing page of the website.
 """
 
-from django.test import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 # Application imports
 import functional_tests.common as ftcommon
 
 
-class MainLandingPage(LiveServerTestCase):
+class MainLandingPage(StaticLiveServerTestCase):
 
     def setUp(self):
         self.browser = ftcommon.get_browser_instance()
