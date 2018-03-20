@@ -19,5 +19,5 @@ from app_search import views as app_search_views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path(r'^$', app_search_views.home_page, name='home'),
+    path('', app_search_views.home_page, name='home'),
 ]
