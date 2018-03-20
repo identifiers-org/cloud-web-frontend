@@ -23,3 +23,6 @@ class MainLandingPage(unittest.TestCase):
 
     def tearDown(self):
         self.browser.quit()
+
+    def test_main_landing_page_content(self):
+        pass
