@@ -89,7 +89,6 @@ var AppSearchHomePageGlue = (function () {
                     location.replace(resolvedResource.accessUrl);
                 }
             }, that.getInputCompactId());
-            console.debug("I'm gonna be lucky CLICKED");
             return false;
         });
     };
