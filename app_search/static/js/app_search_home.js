@@ -16,7 +16,7 @@ var AppSearchHomePageGlue = (function () {
 
     function initPage() {
         // This function hooks all the events to the webpage
-        console.debug("Initialize page Javascript...")
+        console.debug("Initialize page Javascript...");
         resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
         resolutionRequestController = new ResolutionRequestController("resolution_form",
             "resolve_input_box",
@@ -34,31 +34,29 @@ var AppSearchHomePageGlue = (function () {
         this.btnLuckyId = btnLuckyId;
         console.debug("Wiring the Resolution Request Controller");
         // Attach events
+        this.clickBtnLuckyListenerSetup()
         document.getElementById(resolutionFormId).addEventListener("submit", this.formSubmit);
         document.getElementById(btnResolveId).addEventListener("click", this.clickBtnResolve);
-        document.getElementById(btnLuckyId).addEventListener("click", this.clickBtnLucky);
+
     }
 
-    ResolutionRequestController.prototype.getTypedCompactId = function () {
-        // TODO
-        return document.getElementById(this.inputTextId).value;
-    };
-
-    ResolutionRequestController.prototype.clickBtnLucky = function (event) {
-        event.preventDefault();
-        // TODO
-        // Resolve Compact ID
-        getResolvedResources(function (resolvedResources) {
-            if (resolvedResources) {
-                // Select Highest Scored Resolved Resource
-                resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
-                console.debug("Redirecting to Resolved Resource");
-                printResolvedResource(resolvedResource);
-                // TODO - Redirect
-            }
-        }, this.getTypedCompactId());
-        console.debug("I'm gonna be lucky CLICKED");
-        return false;
+    ResolutionRequestController.prototype.clickBtnLuckyListenerSetup = function () {
+        that = this;
+        document.getElementById(this.btnLuckyId).addEventListener("click", function (event) {
+            event.preventDefault();
+            // Resolve Compact ID
+            getResolvedResources(function (resolvedResources) {
+                if (resolvedResources) {
+                    // Select Highest Scored Resolved Resource
+                    resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
+                    console.debug("Redirecting to Resolved Resource");
+                    printResolvedResource(resolvedResource);
+                    // TODO - Redirect
+                }
+            }, that.getInputCompactId());
+            console.debug("I'm gonna be lucky CLICKED");
+            return false;
+        });
     };
 
     ResolutionRequestController.prototype.clickBtnResolve = function (event) {
@@ -80,13 +78,18 @@ var AppSearchHomePageGlue = (function () {
     };
     // END --- Resolution request controller
 
+    ResolutionRequestController.prototype.getInputCompactId = function () {
+        console.debug("Get the Compact ID entered");
+        return document.getElementById(this.inputTextId).value;
+    };
+
     // Resolution Results Controller
     function ResolutionResultsController(divId) {
         // TODO
         this.divId = divId;
     }
 
-    ResolutionResultsController.prototype.showResolutionDataSet = function(dataset) {
+    ResolutionResultsController.prototype.showResolutionDataSet = function (dataset) {
         // TODO
     };
 
@@ -124,6 +127,7 @@ var AppSearchHomePageGlue = (function () {
             callback(response.payload.resolvedResources);
         }, compactId, selector);
     }
+
     // END --- Resolution Helper
     // Debug Helper
     function printResolvedResource(resolvedResource) {
@@ -135,6 +139,7 @@ var AppSearchHomePageGlue = (function () {
         console.log("\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
         console.log("=======================================================");
     }
+
     // END --- Debug Helper
 
     return {
