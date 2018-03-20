@@ -8,12 +8,18 @@
  */
 var AppSearchHomePageGlue = (function () {
     // TODO
-    function init_page() {
+    function initPage() {
+        // This function hooks all the events to the webpage
         console.debug("Initialize page Javascript...")
     }
 
+    function resultsMediator(divId) {
+        // TODO
+        this.divId = divId;
+    }
+
     return {
-        init: init_page
+        init: initPage
     };
 })();
 
