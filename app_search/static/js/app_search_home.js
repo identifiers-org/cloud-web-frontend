@@ -19,7 +19,8 @@ var AppSearchHomePageGlue = (function () {
         resolutionRequestController = new ResolutionRequestController("resolution_form",
             "resolve_input_box",
             "btn_resolve",
-            "btn_resolve_lucky")
+            "btn_resolve_lucky");
+        messageBannerController = new MessageBannerController('error_warning');
     }
 
     // Resolution request controller
