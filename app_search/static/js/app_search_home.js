@@ -12,8 +12,21 @@ var AppSearchHomePageGlue = (function () {
         // This function hooks all the events to the webpage
         console.debug("Initialize page Javascript...")
     }
+    
+    function ResolutionRequestController(inputTextId, btnResolveId, btnLuckyId) {
+        // TODO
+        this.inputTextId = inputTextId;
+        this.btnResolveId = btnResolveId;
+        this.btnLuckyId = btnLuckyId;
+    }
 
+    ResolutionRequestController.prototype.clickBtnLucky = function () {
+        // TODO
+    };
 
+    ResolutionRequestController.prototype.clickBtnResolve = function () {
+        // TODO
+    };
 
     function ResolutionResultsController(divId) {
         // TODO
