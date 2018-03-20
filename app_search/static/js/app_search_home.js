@@ -9,7 +9,7 @@
 var AppSearchHomePageGlue = (function () {
     // To simplify things, as all these components are not generic, they are going to be coupled, and I'll save a lot of
     // coding on event producers and consumers, as well as a big mediator.
-    var resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
+    var resolver;
     var resolutionRequestController;
     var resolutionResultsController;
     var messageBannerController;
@@ -17,6 +17,7 @@ var AppSearchHomePageGlue = (function () {
     function initPage() {
         // This function hooks all the events to the webpage
         console.debug("Initialize page Javascript...")
+        resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
         resolutionRequestController = new ResolutionRequestController("resolution_form",
             "resolve_input_box",
             "btn_resolve",
