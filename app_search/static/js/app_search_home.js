@@ -60,10 +60,11 @@ var AppSearchHomePageGlue = (function () {
         that = this;
         document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
             event.preventDefault();
-            // TODO
-            // TODO - Resolve Compact ID
-            // TODO - If there's only one Resolved Resource, redirect
-            // TODO - Tell the Resolved Resource diplay to show the options
+            // Resolve Compact ID
+            getResolvedResources(function (resolvedResources) {
+                // TODO - If there's only one Resolved Resource, redirect
+                // TODO - Tell the Resolved Resource diplay to show the options
+            });
             console.debug("Resolve Button CLICKED");
             return false;
         });
