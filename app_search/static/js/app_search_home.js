@@ -33,6 +33,9 @@ var AppSearchHomePageGlue = (function () {
     ResolutionRequestController.prototype.clickBtnLucky = function (event) {
         event.preventDefault();
         // TODO
+        // TODO - Resolve Compact ID
+        // TODO - Select Highest Scored Resolved Resource
+        // TODO - Redirect there
         console.debug("I'm gonna be lucky CLICKED");
         return false;
     };
@@ -40,6 +43,9 @@ var AppSearchHomePageGlue = (function () {
     ResolutionRequestController.prototype.clickBtnResolve = function (event) {
         event.preventDefault();
         // TODO
+        // TODO - Resolve Compact ID
+        // TODO - If there's only one Resolved Resource, redirect
+        // TODO - Tell the Resolved Resource diplay to show the options
         console.debug("Resolve Button CLICKED");
         return false;
     };
