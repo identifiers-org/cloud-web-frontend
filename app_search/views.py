@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 
 # Search Home Page
-def home_page():
-    pass
+def home_page(request):
+    return render(request, 'home.html')
