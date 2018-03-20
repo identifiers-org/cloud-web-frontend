@@ -37,9 +37,6 @@ var AppSearchHomePageGlue = (function () {
         this.clickBtnLuckyListenerSetup();
         this.clickBtnResolveListenerSetup();
         this.formSubmitListenerSetup();
-        document.getElementById(resolutionFormId).addEventListener("submit", this.formSubmit);
-
-
     }
 
     ResolutionRequestController.prototype.clickBtnLuckyListenerSetup = function () {
@@ -63,7 +60,7 @@ var AppSearchHomePageGlue = (function () {
 
     ResolutionRequestController.prototype.clickBtnResolveListenerSetup = function () {
         that = this;
-        document.getElementById(btnResolveId).addEventListener("click", function (event) {
+        document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
             event.preventDefault();
             // TODO
             // TODO - Resolve Compact ID
@@ -75,11 +72,14 @@ var AppSearchHomePageGlue = (function () {
     };
 
     ResolutionRequestController.prototype.formSubmitListenerSetup = function () {
-        // TODO
-        // TODO - Do the same as the "lucky" button
-        event.preventDefault();
-        console.debug("Hit enter in resolution request form");
-        return false;
+        that = this;
+        document.getElementById(this.resolutionFormId).addEventListener("submit", function (event) {
+            // TODO
+            // TODO - Do the same as the "lucky" button
+            event.preventDefault();
+            console.debug("Hit enter in resolution request form");
+            return false;
+        });
     };
     // END --- Resolution request controller
 
