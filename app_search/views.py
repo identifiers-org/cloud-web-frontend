@@ -6,3 +6,8 @@ from django.shortcuts import render
 # Search Home Page
 def home_page(request):
     return render(request, 'home.html')
+
+
+def resolve(request, compact_id):
+    pass
+
