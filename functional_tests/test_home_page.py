@@ -20,4 +20,6 @@ class MainLandingPage(unittest.TestCase):
 
     def setUp(self):
         self.browser = ftcommon.get_browser_instance()
-        
+
+    def tearDown(self):
+        self.browser.quit()
