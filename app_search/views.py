@@ -10,7 +10,7 @@ def home_page(request):
 
 
 def resolve(request, compact_id):
-    pass
+    return "Resolution request received for Compact ID {}".format(compact_id)
 
 
 def resolve_with_selector(request, selector, compact_id):
