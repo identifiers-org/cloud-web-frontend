@@ -79,6 +79,14 @@ var AppSearchHomePageGlue = (function () {
     };
     // END --- Resolution Results Controller
 
+    // Message Banner Controller
+    function MessageBannerController(divId) {
+        this.divId = divId
+    }
+
+    
+    // END --- Message Banner Controller
+
     // Resolution Helper
     function getResolvedResources(callback, compactId, selector) {
         resolver.resolve(function (response) {
