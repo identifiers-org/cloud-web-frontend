@@ -10,6 +10,7 @@
     <div id="search_box">
         <form method="post">
             <input id="search_input_box" name="search_subject" placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
+            {% csrf_token %}
         </form>
     </div>
 </div>
