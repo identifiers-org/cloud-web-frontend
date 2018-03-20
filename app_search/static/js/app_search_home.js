@@ -62,8 +62,13 @@ var AppSearchHomePageGlue = (function () {
             event.preventDefault();
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
-                // TODO - If there's only one Resolved Resource, redirect
-                // TODO - Tell the Resolved Resource diplay to show the options
+                if (resolvedResources) {
+                    if (resolvedResources.length == 1) {
+                        // If there's only one Resolved Resource, redirect
+                        location.replace(resolvedResources[0].accessUrl);
+                    }
+                    // TODO - Tell the Resolved Resource display to show the options
+                }
             });
             console.debug("Resolve Button CLICKED");
             return false;
