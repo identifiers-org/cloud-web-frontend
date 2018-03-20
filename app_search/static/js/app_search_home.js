@@ -84,7 +84,9 @@ var AppSearchHomePageGlue = (function () {
         this.divId = divId
     }
 
-    
+    MessageBannerController.prototype.reset = function () {
+        // TODO
+    };
     // END --- Message Banner Controller
 
     // Resolution Helper
