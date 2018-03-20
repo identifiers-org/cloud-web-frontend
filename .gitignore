@@ -5,3 +5,4 @@ tmp
 logs
 run
 **/__pycache__
+db.sqlite3
