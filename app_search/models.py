@@ -16,10 +16,3 @@ class ResolutionServiceLocationFactory:
         pass
 
 
-class ApplicationProfileManager:
-    APPLICATION_PROFILE_PRODUCTION = 'production'
-    APPLICATION_PROFILE_DEVELOPMENT = 'development'
-
-    @staticmethod
-    def get_application_active_profile():
-        return os.environ.get('APPLICATION_ACTIVE_PROFILE', ApplicationProfileManager.APPLICATION_PROFILE_PRODUCTION)
