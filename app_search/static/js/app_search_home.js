@@ -16,7 +16,6 @@ var AppSearchHomePageGlue = (function () {
 
     function initPage() {
         // This function hooks all the events to the webpage
-        console.debug("Initialize page Javascript...");
         resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
         resolutionRequestController = new ResolutionRequestController("resolution_form",
             "resolve_input_box",
