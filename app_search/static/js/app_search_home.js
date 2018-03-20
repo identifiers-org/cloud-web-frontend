@@ -123,7 +123,10 @@ var AppSearchHomePageGlue = (function () {
     }
 
     MessageBannerController.prototype.reset = function () {
-        // TODO
+        var resultsNode = document.getElementById(this.divId);
+        while (resultsNode.firstChild) {
+            resultsNode.removeChild(resultsNode.firstChild);
+        }
     };
 
     MessageBannerController.prototype.error = function (errorMessage) {
