@@ -72,7 +72,6 @@ var AppSearchHomePageGlue = (function () {
                     resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
             }, that.getInputCompactId());
-            console.debug("Resolve Button CLICKED");
             return false;
         });
     };
