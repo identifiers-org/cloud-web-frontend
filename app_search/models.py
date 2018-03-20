@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class HomePage:
@@ -7,5 +8,6 @@ class HomePage:
     def get_resolver_host_and_port():
         pass
 
-class ResolverFactory:
+
+class ResolutionServiceLocationFactory:
     pass
