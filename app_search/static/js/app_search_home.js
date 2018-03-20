@@ -8,6 +8,10 @@
  */
 var AppSearchHomePageGlue = (function () {
     // TODO
+    var resolutionRequestController;
+    var resolutionResultsController;
+    var messageBannerController;
+
     function initPage() {
         // This function hooks all the events to the webpage
         console.debug("Initialize page Javascript...")
@@ -52,6 +56,7 @@ var AppSearchHomePageGlue = (function () {
 
     ResolutionRequestController.prototype.formSubmit = function (event) {
         // TODO
+        // TODO - Do the same as the "lucky" button
         event.preventDefault();
         console.debug("Hit enter in resolution request form");
         return false;
@@ -72,6 +77,20 @@ var AppSearchHomePageGlue = (function () {
         // TODO
     };
     // END --- Resolution Results Controller
+
+    // Resolution Helper
+    function getResolvedResources(callback, compactId, selector) {
+        resolver = IdentifiersJS.getResolver(resolverHost, resolverPort);
+        resolver.resolve(function (response) {
+            // TODO
+            if response.httpStatus !== 200) {
+                // TODO - Handle the error
+                console.error("ERROR RESPONSE FROM THE RESOLVER, TODO HANDLER");
+            }
+            callback(response.payload.resolvedResources);
+        }, compactId, selector);
+    }
+    // END --- Resolution Helper
 
     return {
         init: initPage
