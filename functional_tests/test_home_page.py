@@ -8,5 +8,5 @@
 # 
 
 """
-Document your module here
+Acceptance test for the home page, which is the main landing page of the website.
 """
