@@ -48,13 +48,10 @@ var AppSearchHomePageGlue = (function () {
                 if (resolvedResources) {
                     // Select Highest Scored Resolved Resource
                     resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
-                    //console.debug("Redirecting to Resolved Resource");
-                    //printResolvedResource(resolvedResource);
                     // TODO - Perfect place for metrics collection
                     location.replace(resolvedResource.accessUrl);
                 }
             }, that.getInputCompactId());
-            console.debug("I'm gonna be lucky CLICKED");
             return false;
         });
     };
@@ -75,10 +72,17 @@ var AppSearchHomePageGlue = (function () {
     ResolutionRequestController.prototype.formSubmitListenerSetup = function () {
         that = this;
         document.getElementById(this.resolutionFormId).addEventListener("submit", function (event) {
-            // TODO
-            // TODO - Do the same as the "lucky" button
             event.preventDefault();
-            console.debug("Hit enter in resolution request form");
+            // Resolve Compact ID
+            getResolvedResources(function (resolvedResources) {
+                if (resolvedResources) {
+                    // Select Highest Scored Resolved Resource
+                    resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
+                    // TODO - Perfect place for metrics collection
+                    location.replace(resolvedResource.accessUrl);
+                }
+            }, that.getInputCompactId());
+            console.debug("I'm gonna be lucky CLICKED");
             return false;
         });
     };
