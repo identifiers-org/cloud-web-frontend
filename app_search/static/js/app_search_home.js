@@ -34,9 +34,11 @@ var AppSearchHomePageGlue = (function () {
         this.btnLuckyId = btnLuckyId;
         console.debug("Wiring the Resolution Request Controller");
         // Attach events
-        this.clickBtnLuckyListenerSetup()
+        this.clickBtnLuckyListenerSetup();
+        this.clickBtnResolveListenerSetup();
+        this.formSubmitListenerSetup();
         document.getElementById(resolutionFormId).addEventListener("submit", this.formSubmit);
-        document.getElementById(btnResolveId).addEventListener("click", this.clickBtnResolve);
+
 
     }
 
@@ -59,17 +61,20 @@ var AppSearchHomePageGlue = (function () {
         });
     };
 
-    ResolutionRequestController.prototype.clickBtnResolve = function (event) {
-        event.preventDefault();
-        // TODO
-        // TODO - Resolve Compact ID
-        // TODO - If there's only one Resolved Resource, redirect
-        // TODO - Tell the Resolved Resource diplay to show the options
-        console.debug("Resolve Button CLICKED");
-        return false;
+    ResolutionRequestController.prototype.clickBtnResolveListenerSetup = function () {
+        that = this;
+        document.getElementById(btnResolveId).addEventListener("click", function (event) {
+            event.preventDefault();
+            // TODO
+            // TODO - Resolve Compact ID
+            // TODO - If there's only one Resolved Resource, redirect
+            // TODO - Tell the Resolved Resource diplay to show the options
+            console.debug("Resolve Button CLICKED");
+            return false;
+        });
     };
 
-    ResolutionRequestController.prototype.formSubmit = function (event) {
+    ResolutionRequestController.prototype.formSubmitListenerSetup = function () {
         // TODO
         // TODO - Do the same as the "lucky" button
         event.preventDefault();
