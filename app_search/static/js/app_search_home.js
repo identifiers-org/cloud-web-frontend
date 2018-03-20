@@ -105,7 +105,7 @@ var AppSearchHomePageGlue = (function () {
         this.divId = divId;
     }
 
-    ResolutionResultsController.prototype.showResolutionDataSet = function (dataset) {
+    ResolutionResultsController.prototype.showResolutionDataSet = function (resolvedResources) {
         // TODO
     };
 
