@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Identifiers.org</title>
+    <script type="application/javascript"
+            src="http://js-identifiers-org.s3.us-east-1.amazonaws.com/identifiersjs/identifiers.js" async>
+    </script>
 </head>
 <body>
 <div id="search_area">
     <div id="search_logo"></div>
     <div id="search_box">
         <form method="post">
-            <input id="search_input_box" name="search_subject" placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
+            <input id="search_input_box" name="search_subject"
+                   placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
             {% csrf_token %}
         </form>
     </div>
