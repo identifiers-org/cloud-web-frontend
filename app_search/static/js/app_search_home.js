@@ -13,16 +13,18 @@ var AppSearchHomePageGlue = (function () {
         console.debug("Initialize page Javascript...")
     }
 
-    function ResultsController(divId) {
+
+
+    function ResolutionResultsController(divId) {
         // TODO
         this.divId = divId;
     }
 
-    ResultsController.prototype.showResolutionDataSet = function(dataset) {
+    ResolutionResultsController.prototype.showResolutionDataSet = function(dataset) {
         // TODO
     };
 
-    ResultsController.prototype.reset = function () {
+    ResolutionResultsController.prototype.reset = function () {
         // TODO
     };
 
