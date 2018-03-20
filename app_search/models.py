@@ -22,4 +22,4 @@ class ApplicationProfileManager:
 
     @staticmethod
     def get_application_active_profile():
-        pass
+        return os.environ.get('APPLICATION_ACTIVE_PROFILE', ApplicationProfileManager.APPLICATION_PROFILE_PRODUCTION)
