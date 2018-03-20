@@ -66,9 +66,10 @@ var AppSearchHomePageGlue = (function () {
                 if (resolvedResources) {
                     if (resolvedResources.length == 1) {
                         // If there's only one Resolved Resource, redirect
+                        // TODO - Perfect place for metrics collection
                         location.replace(resolvedResources[0].accessUrl);
                     }
-                    // TODO - Tell the Resolved Resource display to show the options
+                    // Tell the Resolved Resource display to show the options
                     resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
             }, that.getInputCompactId());
