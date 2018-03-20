@@ -8,5 +8,5 @@ from app_search.views import home_page
 class HomePageTest(TestCase):
 
     def test_this_app_is_the_root_landing_page(self):
-        found = resolve('/')
-        self.assertEqual(found.func, home_page)
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
