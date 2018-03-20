@@ -1,3 +1,4 @@
+import os
 from django.db import models
 
 
@@ -10,4 +11,15 @@ class HomePage:
 
 
 class ResolutionServiceLocationFactory:
-    pass
+    @staticmethod
+    def get_resolver_host_and_port():
+        pass
+
+
+class ApplicationProfileManager:
+    APPLICATION_PROFILE_PRODUCTION = 'production'
+    APPLICATION_PROFILE_DEVELOPMENT = 'development'
+
+    @staticmethod
+    def get_application_active_profile():
+        pass
