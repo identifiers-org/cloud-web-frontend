@@ -8,5 +8,5 @@
 # 
 
 """
-Document your module here
+Resolution / Search application specific URL routing
 """
