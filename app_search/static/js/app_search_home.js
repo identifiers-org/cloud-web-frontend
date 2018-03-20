@@ -40,14 +40,22 @@ var AppSearchHomePageGlue = (function () {
 
     ResolutionRequestController.prototype.getTypedCompactId = function () {
         // TODO
+        return document.getElementById(this.inputTextId).value;
     };
 
     ResolutionRequestController.prototype.clickBtnLucky = function (event) {
         event.preventDefault();
         // TODO
-        // TODO - Resolve Compact ID
-        // TODO - Select Highest Scored Resolved Resource
-        // TODO - Redirect there
+        // Resolve Compact ID
+        getResolvedResources(function (resolvedResources) {
+            if (resolvedResources) {
+                // Select Highest Scored Resolved Resource
+                resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
+                console.debug("Redirecting to Resolved Resource");
+                printResolvedResource(resolvedResource);
+                // TODO - Redirect
+            }
+        }, this.getTypedCompactId());
         console.debug("I'm gonna be lucky CLICKED");
         return false;
     };
@@ -116,6 +124,17 @@ var AppSearchHomePageGlue = (function () {
         }, compactId, selector);
     }
     // END --- Resolution Helper
+    // Debug Helper
+    function printResolvedResource(resolvedResource) {
+        console.log("============= Resolved Resource ID " + resolvedResource.id + " =======================");
+        console.log("\tResolved Resource Location '" + resolvedResource.location + "'");
+        console.log("\tResolved Resource Prefix '" + resolvedResource.resourcePrefix + "'");
+        console.log("\tInformation: " + resolvedResource.info);
+        console.log("\tAccess URL: " + resolvedResource.accessUrl);
+        console.log("\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
+        console.log("=======================================================");
+    }
+    // END --- Debug Helper
 
     return {
         init: initPage
