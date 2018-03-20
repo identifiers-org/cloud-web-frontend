@@ -6,3 +6,6 @@ class HomePage:
     @staticmethod
     def get_resolver_host_and_port():
         pass
+
+class ResolverFactory:
+    pass
