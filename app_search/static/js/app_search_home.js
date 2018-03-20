@@ -21,6 +21,7 @@ var AppSearchHomePageGlue = (function () {
             "btn_resolve",
             "btn_resolve_lucky");
         messageBannerController = new MessageBannerController('error_warning');
+        resolutionResultsController = new ResolutionResultsController('resolution_results');
     }
 
     // Resolution request controller
