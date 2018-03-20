@@ -3,5 +3,6 @@ from django.db import models
 # Create your models here.
 
 class HomePage:
-    def __init__(self):
+    @staticmethod
+    def get_resolver_host_and_port():
         pass
