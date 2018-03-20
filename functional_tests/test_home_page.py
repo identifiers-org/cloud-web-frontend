@@ -10,3 +10,9 @@
 """
 Acceptance test for the home page, which is the main landing page of the website.
 """
+
+import unittest
+# Application imports
+import functional_tests.common as ftcommon
+
+
