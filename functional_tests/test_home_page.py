@@ -28,3 +28,7 @@ class MainLandingPage(unittest.TestCase):
         self.browser.get('http://localhost:8000')
         self.assertIn('Identifiers.org', self.browser.title)
         # TODO - complete this test
+
+
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')
