@@ -17,4 +17,7 @@ import functional_tests.common as ftcommon
 
 
 class MainLandingPage(unittest.TestCase):
-    pass
+
+    def setUp(self):
+        self.browser = ftcommon.get_browser_instance()
+        
