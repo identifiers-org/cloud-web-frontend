@@ -48,8 +48,8 @@ var AppSearchHomePageGlue = (function () {
                 if (resolvedResources) {
                     // Select Highest Scored Resolved Resource
                     resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
-                    console.debug("Redirecting to Resolved Resource");
-                    printResolvedResource(resolvedResource);
+                    //console.debug("Redirecting to Resolved Resource");
+                    //printResolvedResource(resolvedResource);
                     // TODO - Perfect place for metrics collection
                     location.replace(resolvedResource.accessUrl);
                 }
