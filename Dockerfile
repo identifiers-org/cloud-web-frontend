@@ -23,4 +23,4 @@ ENV DJANGO_ALLOWED_HOSTS=*.identifiers.org
 
 # Launch information
 EXPOSE 9090
-WORKDIR /home/webapp
+WORKDIR /home/webapp/site
