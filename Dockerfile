@@ -6,6 +6,9 @@ LABEL maintainer="Manuel Bernal Llinares <mbdebian@gmail.com>"
 # Application Working directory
 RUN mkdir -p /home/webapp/public_html
 
+# Install Application REQUIREMENTS
+COPY requirements.txt /home/webapp/.
+
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
 
