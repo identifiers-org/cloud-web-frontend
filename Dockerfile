@@ -3,15 +3,15 @@
 FROM debian:stable-slim
 LABEL maintainer="Manuel Bernal Llinares <mbdebian@gmail.com>"
 
-# Application Working directory
-RUN mkdir -p /home/webapp/public_html
+# Site folder
+RUN mkdir -p /home/webapp/site
 RUN mkdir -p /home/webapp/tmp
 
 # Install Application REQUIREMENTS
 ADD . /home/webapp/tmp
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y python3 python3-pip && \
+    apt-get install -y python3 python3-pip git && \
     pip3 install pipreqs nose && \
     pip3 install -r /home/webapp/tmp/requirements.txt
 
