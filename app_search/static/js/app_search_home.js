@@ -123,6 +123,10 @@ var AppSearchHomePageGlue = (function () {
             accessUrlLink.setAttribute('href', resolvedResource.accessUrl);
             accessUrlLink.innerText = resolvedResource.info;
             accessUrlDiv.appendChild(accessUrlLink);
+            // Access URL plain text
+            accessUrlPlainText = document.createElement('div');
+            accessUrlPlainText.setAttribute('id', resolvedResource.id + "_accessUrlPlainText");
+            accessUrlPlainText.innerText = resolvedResource.accessUrl;
             // Resource institution information
             institutionInfoDiv = document.createElement('div');
             institutionInfoDiv.setAttribute('id', resolvedResource.id + "_institution");
@@ -137,6 +141,7 @@ var AppSearchHomePageGlue = (function () {
             locationDiv.innerText = resolvedResource.location;
             // Put everything together
             resourceDiv.appendChild(accessUrlDiv);
+            resourceDiv.appendChild(accessUrlPlainText);
             resourceDiv.appendChild(institutionInfoDiv);
             resourceDiv.appendChild(recommendationIndexDiv);
             resourceDiv.appendChild(locationDiv);
