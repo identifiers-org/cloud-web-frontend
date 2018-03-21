@@ -18,5 +18,6 @@ ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').strip().spli
 SECURE_HSTS_SECONDS = 0
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
+# We don't do redirect because this is designed to be deployed behing an SSL termination load balancer
 SECURE_SSL_REDIRECT = False
 SECURE_SSL_HOST = None
