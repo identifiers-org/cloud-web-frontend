@@ -8,3 +8,6 @@ RUN mkdir -p /home/webapp
 
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
+
+# Launch information
+EXPOSE 9090
