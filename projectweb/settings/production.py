@@ -23,3 +23,4 @@ SECURE_SSL_REDIRECT = False
 SECURE_SSL_HOST = None
 # And nothing to do with any of the other SSL based settings
 SECURE_HSTS_SECONDS = 0
+# Also, we don't use session cookies, so we don't need to set anything there
