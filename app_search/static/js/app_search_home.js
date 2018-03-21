@@ -108,7 +108,42 @@ var AppSearchHomePageGlue = (function () {
     ResolutionResultsController.prototype.showResolutionDataSet = function (resolvedResources) {
         // TODO
         console.debug("ResolutionResultsController - asked to show " + resolvedResources.length + " Resolved Resources");
+        resultsDiv = document.getElementById(this.divId);
         // TODO - Perfect place for metrics collection by inserting extra code in the displayed URL links
+        resolver.sortResolvedResourcesByRecommendationIndexAscending(resolvedResources);
+        resolvedResources.reverse();
+        resolvedResources.forEach(function (resolvedResource) {
+            // Resource DIV
+            resourceDiv = document.createElement('div');
+            resourceDiv.setAttribute('id', resolvedResource.id);
+            // Resource AccessUrl
+            accessUrlDiv = document.createElement('div');
+            accessUrlDiv.setAttribute('id', resolvedResource.id + "_accessUrl");
+            accessUrlLink = document.createElement('a');
+            accessUrlLink.setAttribute('href', resolvedResource.accessUrl);
+            accessUrlLink.innerText = resolvedResource.info;
+            accessUrlDiv.appendChild(accessUrlLink);
+            // Resource institution information
+            institutionInfoDiv = document.createElement('div');
+            institutionInfoDiv.setAttribute('id', resolvedResource.id + "_institution");
+            institutionInfoDiv.innerText = resolvedResource.institution;
+            // Recommendation Score / Index
+            recommendationIndexDiv = document.createElement('div');
+            recommendationIndexDiv.setAttribute('id', resolvedResource.id + "_recommendationIndex");
+            recommendationIndexDiv.innerText = "Score: " + resolvedResource.recommendation.recommendationIndex;
+            // Location Information
+            locationDiv = document.createElement('div');
+            locationDiv.setAttribute('id', resolvedResource.id + "_location");
+            locationDiv.innerText = resolvedResource.location;
+            // Put everything together
+            resourceDiv.appendChild(accessUrlDiv);
+            resourceDiv.appendChild(institutionInfoDiv);
+            resourceDiv.appendChild(recommendationIndexDiv);
+            resourceDiv.appendChild(locationDiv);
+            // Append to results
+            resultsDiv.appendChild(resourceDiv);
+        });
+
     };
 
     ResolutionResultsController.prototype.reset = function () {
