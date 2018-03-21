@@ -152,8 +152,11 @@ var AppSearchHomePageGlue = (function () {
     };
 
     ResolutionResultsController.prototype.reset = function () {
-        // TODO
-        console.debug("Reset Resolved Resources results display");
+        var resultsNode = document.getElementById(this.divId);
+        while (resultsNode.firstChild) {
+            resultsNode.removeChild(resultsNode.firstChild);
+        }
+
     };
     // END --- Resolution Results Controller
 
@@ -163,10 +166,7 @@ var AppSearchHomePageGlue = (function () {
     }
 
     MessageBannerController.prototype.reset = function () {
-        var resultsNode = document.getElementById(this.divId);
-        while (resultsNode.firstChild) {
-            resultsNode.removeChild(resultsNode.firstChild);
-        }
+        // TODO
     };
 
     MessageBannerController.prototype.error = function (errorMessage) {
