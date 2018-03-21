@@ -8,7 +8,6 @@ RUN mkdir -p /home/webapp/site
 RUN mkdir -p /home/webapp/tmp
 
 # Install Application REQUIREMENTS
-ADD . /home/webapp/tmp
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y python3 python3-pip git nginx && \
