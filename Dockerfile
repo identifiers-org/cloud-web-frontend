@@ -11,7 +11,7 @@ RUN mkdir -p /home/webapp/tmp
 ADD . /home/webapp/tmp
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y python3 python3-pip git && \
+    apt-get install -y python3 python3-pip git nginx && \
     pip3 install pipreqs nose && \
     pip3 install -r /home/webapp/tmp/requirements.txt
 
