@@ -17,6 +17,7 @@ RUN apt-get update && \
 
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
+ENV SITE_CNAME=cloud.identifiers.org
 
 # Launch information
 EXPOSE 9090
