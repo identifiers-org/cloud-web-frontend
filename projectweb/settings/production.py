@@ -16,3 +16,4 @@ from .base import *
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').strip().split(',')
 SECURE_HSTS_SECONDS = 0
+SECURE_CONTENT_TYPE_NOSNIFF = True
