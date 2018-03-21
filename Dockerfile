@@ -14,7 +14,9 @@ RUN apt-get update && \
     git clone https://github.com/identifiers-org/cloud-web-frontend.git site && \
     pip3 install --no-cache-dir pipreqs nose && \
     pip3 install --no-cache-dir -r site/requirements.txt && \
-    pip3 install gunicorn
+    pip3 install --no-cache-dir gunicorn && \
+    rm /etc/nginx/sites-enabled/default && \
+    ln -s /home/webapp/site/deployment/nginx.conf /etc/nginx/sites-enabled/site
 
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
