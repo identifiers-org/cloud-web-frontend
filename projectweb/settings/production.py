@@ -14,6 +14,7 @@ Production Environment settings
 import os
 from .base import *
 
+DEBUG = False
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').strip().split(',')
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
@@ -23,4 +24,9 @@ SECURE_SSL_REDIRECT = False
 SECURE_SSL_HOST = None
 # And nothing to do with any of the other SSL based settings
 SECURE_HSTS_SECONDS = 0
+
+X_FRAME_OPTIONS = 'DENY'
 # Also, we don't use session cookies, so we don't need to set anything there
+# TODO - Check how these settings play with the Load Balancer SSL termination
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
