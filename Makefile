@@ -55,6 +55,10 @@ development_run_tests: development_env_up
 	@echo "<===|DEVOPS|===> [TESTS] Running Unit Tests"
 	@python_install/bin/python manage.py test
 
+container_production_build: app_structure
+	@echo "<===|DEVOPS|===> [BUILD] Production container $(container_name):$(tag_version)"
+	@docker build -t $(container_name):$(tag_version) -t $(container_name):latest .
+
 # Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
