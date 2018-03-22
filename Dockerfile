@@ -17,7 +17,9 @@ RUN apt-get update && \
     pip3 install --no-cache-dir gunicorn && \
     rm /etc/nginx/sites-enabled/default && \
     ln -s /home/webapp/site/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
-    mkdir -p /home/webapp/site/static
+    mkdir -p /home/webapp/site/static && \
+    cd /home/webapp/site && \
+    python3 manage.py collectstatic --noinput
 
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
