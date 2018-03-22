@@ -29,6 +29,9 @@ sync_project_version:
 set_next_development_version:
 	@echo "<===|DEVOPS|===> [SYNC] Setting the new development version, current ${tag_version}"
 
+deploy: clean container_production_push
+	@echo "<===|DEVOPS|===> [DEPLOY] Deploying service container version ${tag_version}"
+
 # Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
