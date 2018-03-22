@@ -22,7 +22,7 @@ RUN apt-get update && \
     cd ${FOLDER_BASE} && \
     git clone https://github.com/identifiers-org/cloud-web-frontend.git ${FOLDER_NAME_SITE} && \
     pip3 install --no-cache-dir pipreqs nose && \
-    pip3 install --no-cache-dir -r site/requirements.txt && \
+    pip3 install --no-cache-dir -r ${FOLDER_WEBSITE_ROOT}/requirements.txt && \
     pip3 install --no-cache-dir gunicorn && \
     rm /etc/nginx/sites-enabled/default && \
     ln -s ${FOLDER_WEBSITE_ROOT}/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
