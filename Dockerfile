@@ -18,7 +18,7 @@ RUN mkdir -p ${FOLDER_BASE}
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y python3 python3-pip git nginx && \
-    cd /home/webapp && \
+    cd ${FOLDER_BASE} && \
     git clone https://github.com/identifiers-org/cloud-web-frontend.git site && \
     pip3 install --no-cache-dir pipreqs nose && \
     pip3 install --no-cache-dir -r site/requirements.txt && \
