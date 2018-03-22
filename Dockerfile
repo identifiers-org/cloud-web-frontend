@@ -4,6 +4,8 @@ FROM debian:stable-slim
 LABEL maintainer="Manuel Bernal Llinares <mbdebian@gmail.com>"
 
 # Environment - Defaults
+ENV FOLDER_BASE /home/webapp
+ENV FOLDER_NAME_SITE site
 ENV DJANGO_SETTINGS_MODULE projectweb.settings.production
 ENV DJANGO_ALLOWED_HOSTS *.identifiers.org
 ENV DJANGO_STATIC_ROOT /home/webapp/site/static
