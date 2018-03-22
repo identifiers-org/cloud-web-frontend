@@ -18,6 +18,8 @@ tag_version = $(shell cat VERSION)
 all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
 
+# Release cycle
+
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
 
