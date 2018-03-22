@@ -19,7 +19,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y python3 python3-pip git nginx && \
     cd ${FOLDER_BASE} && \
-    git clone https://github.com/identifiers-org/cloud-web-frontend.git site && \
+    git clone https://github.com/identifiers-org/cloud-web-frontend.git ${FOLDER_NAME_SITE} && \
     pip3 install --no-cache-dir pipreqs nose && \
     pip3 install --no-cache-dir -r site/requirements.txt && \
     pip3 install --no-cache-dir gunicorn && \
