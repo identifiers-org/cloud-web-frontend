@@ -32,6 +32,16 @@ set_next_development_version:
 deploy: clean container_production_push
 	@echo "<===|DEVOPS|===> [DEPLOY] Deploying service container version ${tag_version}"
 
+development_env_up:
+	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
+	@docker-compose -f $(docker_compose_development_file) up -d
+	@# TODO Clean this way of referencing the target name in future iterations
+	@echo "DJANGO_SETTINGS_MODULE=${development_profile}" >> .env
+	@python_install/bin/python manage.py runserver &
+	@echo $! > ${file_web_server_pid}
+	@rm -f development_env_down
+	@touch development_env_up
+
 # Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
