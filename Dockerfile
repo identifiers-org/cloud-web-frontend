@@ -12,6 +12,7 @@ ENV DJANGO_ALLOWED_HOSTS *.identifiers.org
 ENV DJANGO_STATIC_ROOT ${FOLDER_WEBSITE_ROOT}/static
 ENV SITE_CNAME cloud.identifiers.org
 ENV PROXY_PASS_INFORMATION unix:/tmp/webapp.socket
+ENV GUNICORN_WSGI_APPLICATION projectweb.wsgi:application
 
 # Site folder
 RUN mkdir -p ${FOLDER_BASE}
