@@ -23,9 +23,9 @@ RUN apt-get update && \
 
 # Environment - Defaults
 ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
-ENV SITE_CNAME=cloud.identifiers.org
 ENV DJANGO_ALLOWED_HOSTS=*.identifiers.org
-ENV STATIC_ROOT=/home/webapp/site/static
+ENV DJANGO_STATIC_ROOT=/home/webapp/site/static
+ENV SITE_CNAME=cloud.identifiers.org
 
 # Launch information
 EXPOSE 9090
