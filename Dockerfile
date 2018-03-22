@@ -37,4 +37,4 @@ RUN apt-get update && \
 # Launch information
 EXPOSE 9090
 WORKDIR /home/webapp/site
-CMD /bin/bash -c deployment/startcontainer.sh
+CMD deployment/startcontainer.sh
