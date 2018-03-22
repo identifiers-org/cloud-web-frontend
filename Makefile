@@ -20,6 +20,9 @@ all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
 
 # Release cycle
+release: deploy set_next_development_version
+	@echo "<===|DEVOPS|===> [RELEASE] New Software Release, and next development version prepared"
+
 
 # Installation related targets
 install: dev_environment
