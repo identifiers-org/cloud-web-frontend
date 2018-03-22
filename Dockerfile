@@ -11,7 +11,7 @@ ENV DJANGO_SETTINGS_MODULE projectweb.settings.production
 ENV DJANGO_ALLOWED_HOSTS *.identifiers.org
 ENV DJANGO_STATIC_ROOT ${FOLDER_WEBSITE_ROOT}/static
 ENV SITE_CNAME cloud.identifiers.org
-ENV PROXY_PASS_UNIX_SOCKET http://unix:/tmp/webapp.socket
+ENV PROXY_PASS_UNIX_SOCKET unix:/tmp/webapp.socket
 
 # Site folder
 RUN mkdir -p ${FOLDER_BASE}
