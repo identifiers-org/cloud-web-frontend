@@ -20,3 +20,4 @@ echo "<===|DEVOPS|===> [START] Starting NGINX"
 /etc/init.d/nginx start
 echo "<===|DEVOPS|===> [DONE] This script will wait here to prevent the container from stopping"
 wait
+echo "<===|DEVOPS|===> [TERMINATE] Something stopped, probably gunicorn, so the scripts ends here, and with it, the container itself"
