@@ -12,6 +12,7 @@ url_download_mac_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome
 url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_windows_chromedriver)
 container_name = identifiersorg/cloud-web-frontend
 docker_compose_development_file = docker-compose-development.yml
+development_profile = base
 
 
 all:
