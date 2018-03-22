@@ -42,6 +42,15 @@ development_env_up:
 	@rm -f development_env_down
 	@touch development_env_up
 
+development_env_down:
+	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment DOWN"
+	@kill -9 $(shell cat ${file_web_server_pid}) && rm ${file_web_server_pid}
+	@> .env
+	@docker-compose -f $(docker_compose_development_file) down
+	@# TODO Clean this way of referencing the target name in future iterations
+	@rm -f development_env_up
+	@touch development_env_down
+
 # Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
