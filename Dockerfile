@@ -12,7 +12,7 @@ ENV DJANGO_STATIC_ROOT /home/webapp/site/static
 ENV SITE_CNAME cloud.identifiers.org
 
 # Site folder
-RUN mkdir -p /home/webapp
+RUN mkdir -p ${FOLDER_BASE}
 
 # Install Application REQUIREMENTS
 RUN apt-get update && \
