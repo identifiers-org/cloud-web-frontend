@@ -12,7 +12,8 @@ url_download_mac_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome
 url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_windows_chromedriver)
 container_name = identifiersorg/cloud-web-frontend
 docker_compose_development_file = docker-compose-development.yml
-development_profile = base
+development_profile = projectweb.settings.base
+file_web_server_pid = web_server.pid
 tag_version = $(shell cat VERSION)
 
 all:
@@ -20,6 +21,7 @@ all:
 
 # Release cycle
 
+# Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
 
@@ -95,4 +97,4 @@ clean_all: clean clean_dev
 	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning all environments"
 # END - Housekeeping
 
-.PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean_bin clean
+.PHONY: install dev_environment install_requirements update_requirements_file tests clean_dev clean_all clean_tmp clean_bin clean development_run_tests container_production_build container_production_push deploy release sync_project_version set_next_development_version
