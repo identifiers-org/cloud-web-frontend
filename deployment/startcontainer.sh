@@ -18,3 +18,5 @@ gunicorn --bind ${PROXY_PASS_INFORMATION} ${GUNICORN_WSGI_APPLICATION} &
 export PID_GUNICORN=$(echo $!)
 echo "<===|DEVOPS|===> [START] Starting NGINX"
 /etc/init.d/nginx start
+echo "<===|DEVOPS|===> [DONE] This script will wait here to prevent the container from stopping"
+wait
