@@ -29,7 +29,7 @@ RUN apt-get update && \
     pip3 install --no-cache-dir -r ${FOLDER_WEBSITE_ROOT}/requirements.txt && \
     pip3 install --no-cache-dir gunicorn && \
     rm /etc/nginx/sites-enabled/default && \
-    ln -s ${FOLDER_WEBSITE_ROOT}/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
+    ln -s ${FOLDER_WEBSITE_ROOT}/deployment/nginx.site /etc/nginx/sites-enabled/site && \
     mkdir -p ${DJANGO_STATIC_ROOT} && \
     cd ${FOLDER_WEBSITE_ROOT} && \
     python3 manage.py collectstatic --noinput
