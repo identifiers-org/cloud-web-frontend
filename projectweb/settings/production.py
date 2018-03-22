@@ -30,3 +30,6 @@ X_FRAME_OPTIONS = 'DENY'
 # TODO - Check how these settings play with the Load Balancer SSL termination
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SECURE = True
+
+# Static files
+STATIC_ROOT = os.environ.get('DJANGO_STATIC_ROOT', 'static')
