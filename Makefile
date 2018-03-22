@@ -13,7 +13,7 @@ url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_ch
 container_name = identifiersorg/cloud-web-frontend
 docker_compose_development_file = docker-compose-development.yml
 development_profile = base
-
+tag_version = $(shell cat VERSION)
 
 all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
