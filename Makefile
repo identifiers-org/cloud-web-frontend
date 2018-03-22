@@ -10,6 +10,8 @@ binary_windows_chromedriver = chromedriver_win32.zip
 url_download_linux_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_linux_chromedriver)
 url_download_mac_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_mac_chromedriver)
 url_download_windows_chromedriver = $(url_base_chrome_driver)$(version_latest_chrome_driver)/$(binary_windows_chromedriver)
+container_name = identifiersorg/cloud-web-frontend
+
 
 all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
