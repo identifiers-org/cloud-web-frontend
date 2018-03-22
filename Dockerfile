@@ -22,10 +22,10 @@ RUN apt-get update && \
     python3 manage.py collectstatic --noinput
 
 # Environment - Defaults
-ENV DJANGO_SETTINGS_MODULE=projectweb.settings.production
-ENV DJANGO_ALLOWED_HOSTS=*.identifiers.org
-ENV DJANGO_STATIC_ROOT=/home/webapp/site/static
-ENV SITE_CNAME=cloud.identifiers.org
+ENV DJANGO_SETTINGS_MODULE projectweb.settings.production
+ENV DJANGO_ALLOWED_HOSTS *.identifiers.org
+ENV DJANGO_STATIC_ROOT /home/webapp/site/static
+ENV SITE_CNAME cloud.identifiers.org
 
 # Launch information
 EXPOSE 9090
