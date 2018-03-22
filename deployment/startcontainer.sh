@@ -14,5 +14,7 @@ sed -i '/error_log/c\\terror_log \/dev\/stderr' /etc/nginx/nginx.conf
 echo "<===|DEVOPS|===> [CRYPTO] Generating a random secret key for Django"
 export DJANGO_SECRET_KEY=$(python3 -c "import string,random; uni=string.ascii_letters+string.digits+string.punctuation; print(repr(''.join([random.SystemRandom().choice(uni) for i in range(random.randint(45,50))])))")
 echo "<===|DEVOPS|===> [START] Starting Gunicorn"
-gunicorn --bind ${PROXY_PASS_INFORMATION} ${GUNICORN_WSGI_APPLICATION}
-
+gunicorn --bind ${PROXY_PASS_INFORMATION} ${GUNICORN_WSGI_APPLICATION} &
+export PID_GUNICORN=$(echo $!)
+echo "<===|DEVOPS|===> [START] Starting NGINX"
+/etc/init.d/nginx start
