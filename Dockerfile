@@ -27,7 +27,7 @@ RUN apt-get update && \
     rm /etc/nginx/sites-enabled/default && \
     ln -s ${FOLDER_WEBSITE_ROOT}/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
     mkdir -p ${DJANGO_STATIC_ROOT} && \
-    cd /home/webapp/site && \
+    cd ${FOLDER_WEBSITE_ROOT} && \
     python3 manage.py collectstatic --noinput
 
 # Launch information
