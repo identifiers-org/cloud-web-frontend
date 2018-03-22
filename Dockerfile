@@ -6,6 +6,7 @@ LABEL maintainer="Manuel Bernal Llinares <mbdebian@gmail.com>"
 # Environment - Defaults
 ENV FOLDER_BASE /home/webapp
 ENV FOLDER_NAME_SITE site
+ENV FOLDER_WEBSITE_ROOT ${FOLDER_BASE}/${FOLDER_NAME_SITE}
 ENV DJANGO_SETTINGS_MODULE projectweb.settings.production
 ENV DJANGO_ALLOWED_HOSTS *.identifiers.org
 ENV DJANGO_STATIC_ROOT /home/webapp/site/static
@@ -24,7 +25,7 @@ RUN apt-get update && \
     pip3 install --no-cache-dir -r site/requirements.txt && \
     pip3 install --no-cache-dir gunicorn && \
     rm /etc/nginx/sites-enabled/default && \
-    ln -s /home/webapp/site/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
+    ln -s ${FOLDER_WEBSITE_ROOT}/deployment/nginx.conf /etc/nginx/sites-enabled/site && \
     mkdir -p ${DJANGO_STATIC_ROOT} && \
     cd /home/webapp/site && \
     python3 manage.py collectstatic --noinput
