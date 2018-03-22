@@ -51,6 +51,10 @@ development_env_down:
 	@rm -f development_env_up
 	@touch development_env_down
 
+development_run_tests: development_env_up
+	@echo "<===|DEVOPS|===> [TESTS] Running Unit Tests"
+	@python_install/bin/python manage.py test
+
 # Installation related targets
 install: dev_environment
 	@echo "<===|DEVOPS|===> [INSTALL] Platform"
