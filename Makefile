@@ -26,6 +26,8 @@ release: deploy set_next_development_version
 sync_project_version:
 	@echo "<===|DEVOPS|===> [SYNC] Synchronizing project version to version '${tag_version}'"
 
+set_next_development_version:
+	@echo "<===|DEVOPS|===> [SYNC] Setting the new development version, current ${tag_version}"
 
 # Installation related targets
 install: dev_environment
