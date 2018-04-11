@@ -18,6 +18,8 @@ api_version = "1.0"
 # Scheme
 scheme = "http"
 
+# TODO - Abstract Services Clients Factory
+
 # TODO - Server Request model
 # TODO - Server Response model
 # TODO - Recommendation model
