@@ -34,7 +34,7 @@ deploy: clean container_production_push
 
 development_env_up:
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
-	@#docker-compose -f $(docker_compose_development_file) up -d
+	@docker-compose -f $(docker_compose_development_file) up -d
 	@# TODO Clean this way of referencing the target name in future iterations
 	@echo "DJANGO_SETTINGS_MODULE=${development_profile}" >> .env
 	@set -a; source .env; set +a; python_install/bin/python manage.py runserver & echo "$$!" > ${file_web_server_pid}
@@ -47,7 +47,7 @@ development_env_down:
 	@for pid in `ps aux | grep "manage.py runserver" | grep -v grep | awk '{print $$2}'`; do echo "Killing web server with PID $$pid"; kill -9 $$pid; done
 	@> .env
 	@rm ${file_web_server_pid}
-	@#docker-compose -f $(docker_compose_development_file) down
+	@docker-compose -f $(docker_compose_development_file) down
 	@# TODO Clean this way of referencing the target name in future iterations
 	@rm -f development_env_up
 	@touch development_env_down
