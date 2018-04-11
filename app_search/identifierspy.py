@@ -15,6 +15,8 @@ behind modularizing it here, is that the code is as reusable as possible later o
 # Constants
 # API Version
 api_version = "1.0"
+# Scheme
+scheme = "http"
 
 # TODO - Server Request model
 # TODO - Server Response model
