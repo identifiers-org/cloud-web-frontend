@@ -32,7 +32,11 @@ class ServerRequest:
 
 # TODO - Server Response model
 class ServerResponse:
-    pass
+    def __init__(self):
+        self.api_version = ""
+        self.error_message = ""
+        self.http_status = 0
+        self.payload = {}
 
 
 # TODO - Recommendation model
