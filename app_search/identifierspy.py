@@ -16,3 +16,4 @@ behind modularizing it here, is that the code is as reusable as possible later o
 # TODO - Server Response model
 # TODO - Recommendation model
 # TODO - Resolved Resource model
+# TODO - Response Resolve Payload
