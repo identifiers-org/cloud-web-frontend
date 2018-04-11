@@ -12,6 +12,9 @@ In order to meet the initial prototype deadline, just enough client code will be
 behind modularizing it here, is that the code is as reusable as possible later on, when we refactor it out.
 """
 
+# Constants
+api_version = "1.0"
+
 # TODO - Server Request model
 # TODO - Server Response model
 # TODO - Recommendation model
