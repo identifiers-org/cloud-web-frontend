@@ -17,3 +17,5 @@ class ResolutionServiceLocationFactory:
                 os.environ.get('WEB_CONFIG_SERVICE_RESOLVER_PORT', '8080'))
 
 
+class ResolutionModel:
+    pass
