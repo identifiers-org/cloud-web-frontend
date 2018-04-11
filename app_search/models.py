@@ -19,3 +19,7 @@ class ResolutionServiceLocationFactory:
 
 class ResolutionModel:
     pass
+
+
+class ResolutionEngine:
+    pass
