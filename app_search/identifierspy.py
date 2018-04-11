@@ -12,6 +12,8 @@ In order to meet the initial prototype deadline, just enough client code will be
 behind modularizing it here, is that the code is as reusable as possible later on, when we refactor it out.
 """
 
+import abc
+
 # Constants
 # API Version
 api_version = "1.0"
@@ -45,5 +47,9 @@ class ResolvedResource:
 class ResponseResolvePayload:
     pass
 
+
 # TODO - Server Response to Resolve request
+class ServerResponseResolve(ServerResponse):
+    pass
+
 # TODO - Resolver Service wrapper / client
