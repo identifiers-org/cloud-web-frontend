@@ -35,7 +35,11 @@ class ServerResponse:
 class Recommendation:
     pass
 
+
 # TODO - Resolved Resource model
+class ResolvedResource:
+    pass
+
 # TODO - Response Resolve Payload
 # TODO - Server Response to Resolve request
 # TODO - Resolver Service wrapper / client
