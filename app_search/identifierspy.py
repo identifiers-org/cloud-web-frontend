@@ -40,6 +40,10 @@ class Recommendation:
 class ResolvedResource:
     pass
 
+
 # TODO - Response Resolve Payload
+class ResponseResolvePayload:
+    pass
+
 # TODO - Server Response to Resolve request
 # TODO - Resolver Service wrapper / client
