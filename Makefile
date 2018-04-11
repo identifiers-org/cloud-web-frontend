@@ -15,6 +15,7 @@ docker_compose_development_file = docker-compose-development.yml
 development_profile = projectweb.settings.base
 file_web_server_pid = web_server.pid
 tag_version = $(shell cat VERSION)
+file_path_web_server_log = $(shell date -u +"django_runserver_%Y-%m-%dT%H:%M:%SZ.log")
 
 all:
 	@echo "<===|DEVOPS|===> [INFO] NO DEFAULT target set"
