@@ -52,4 +52,7 @@ class ResponseResolvePayload:
 class ServerResponseResolve(ServerResponse):
     pass
 
+
 # TODO - Resolver Service wrapper / client
+class ResolverService:
+    pass
