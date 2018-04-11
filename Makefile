@@ -37,7 +37,7 @@ development_env_up:
 	@docker-compose -f $(docker_compose_development_file) up -d
 	@# TODO Clean this way of referencing the target name in future iterations
 	@echo "DJANGO_SETTINGS_MODULE=${development_profile}" >> .env
-	@python_install/bin/python manage.py runserver &
+	@set -a; source .env; set +a; python_install/bin/python manage.py runserver &
 	@echo $! > ${file_web_server_pid}
 	@rm -f development_env_down
 	@touch development_env_up
