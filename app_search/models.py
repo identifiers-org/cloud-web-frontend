@@ -22,4 +22,8 @@ class ResolutionModel:
 
 
 class ResolutionEngine:
+    """
+    This engine is going to implement the request mechanism to the Resolution API itself until we have time to write a
+    proper Python module.
+    """
     pass
