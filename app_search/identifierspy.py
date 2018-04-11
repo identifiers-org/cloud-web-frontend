@@ -30,7 +30,11 @@ class ServerRequest:
 class ServerResponse:
     pass
 
+
 # TODO - Recommendation model
+class Recommendation:
+    pass
+
 # TODO - Resolved Resource model
 # TODO - Response Resolve Payload
 # TODO - Server Response to Resolve request
