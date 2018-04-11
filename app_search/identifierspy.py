@@ -41,7 +41,9 @@ class ServerResponse:
 
 # TODO - Recommendation model
 class Recommendation:
-    pass
+    def __init__(self):
+        self.recommendation_index = 0
+        self.recommendation_explanation = ""
 
 
 # TODO - Resolved Resource model
