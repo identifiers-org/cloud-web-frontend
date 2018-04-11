@@ -25,7 +25,9 @@ scheme = "http"
 
 # TODO - Server Request model
 class ServerRequest:
-    pass
+    def __init__(self):
+        self.api_version = api_version
+        self.payload = {}
 
 
 # TODO - Server Response model
