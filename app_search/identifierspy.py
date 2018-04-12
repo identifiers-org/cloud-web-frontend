@@ -97,6 +97,8 @@ class ResolvedResource:
                 self.info = json_data[self.RESOLVED_RESOURCE_JSON_KEY_INFO]
             if self.RESOLVED_RESOURCE_JSON_KEY_INSTITUTION in json_data:
                 self.institution = json_data[self.RESOLVED_RESOURCE_JSON_KEY_INSTITUTION]
+            if self.RESOLVED_RESOURCE_JSON_KEY_LOCATION in json_data:
+                self.location = json_data[self.RESOLVED_RESOURCE_JSON_KEY_LOCATION]
 
 
 # TODO - Response Resolve Payload
