@@ -60,7 +60,7 @@ class Recommendation:
 
 # TODO - Resolved Resource model
 class ResolvedResource:
-    def __init__(self):
+    def __init__(self, json_data=None):
         self.id = ""
         self.resource_prefix = ""
         self.access_url = ""
