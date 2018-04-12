@@ -22,7 +22,7 @@ api_version = "1.0"
 scheme = "http"
 
 
-# TODO - Abstract Services Clients Factory
+# TODO - Abstract API Clients Factory
 
 # Server Request model
 class ServerRequest:
