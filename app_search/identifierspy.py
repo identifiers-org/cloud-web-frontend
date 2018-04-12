@@ -99,6 +99,11 @@ class ResolvedResource:
                 self.institution = json_data[self.RESOLVED_RESOURCE_JSON_KEY_INSTITUTION]
             if self.RESOLVED_RESOURCE_JSON_KEY_LOCATION in json_data:
                 self.location = json_data[self.RESOLVED_RESOURCE_JSON_KEY_LOCATION]
+            if (self.RESOLVED_RESOURCE_JSON_KEY_RECOMMENDATION in json_data) \
+                    and (json_data[self.RESOLVED_RESOURCE_JSON_KEY_RECOMMENDATION]):
+                self.recommendation = Recommendation(
+                    json_data=json_data[self.RESOLVED_RESOURCE_JSON_KEY_RECOMMENDATION]
+                )
 
 
 # TODO - Response Resolve Payload
