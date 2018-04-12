@@ -72,6 +72,7 @@ class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'resourcePrefix'
     RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL = 'accessUrl'
     RESOLVED_RESOURCE_JSON_KEY_INFO = 'info'
+    RESOLVED_RESOURCE_JSON_KEY_INSTITUTION = 'institution'
 
     def __init__(self, json_data=None):
         self.id = ""
