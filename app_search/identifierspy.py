@@ -53,6 +53,8 @@ class ServerResponse:
 
 # TODO - Recommendation model
 class Recommendation:
+    RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX = 'recommendationIndex'
+
     def __init__(self, json_data=None):
         self.recommendation_index = 0
         self.recommendation_explanation = "--- Default Recommendation ---"
