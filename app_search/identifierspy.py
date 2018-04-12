@@ -106,7 +106,7 @@ class ResolvedResource:
                 )
 
 
-# TODO - Response Resolve Payload
+# Response Resolve Payload
 class ResponseResolvePayload:
     RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES = 'resolvedResources'
 
