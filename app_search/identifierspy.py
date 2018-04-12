@@ -93,6 +93,8 @@ class ResolvedResource:
                 self.resource_prefix = json_data[self.RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX]
             if self.RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL in json_data:
                 self.access_url = json_data[self.RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL]
+            if self.RESOLVED_RESOURCE_JSON_KEY_INFO in json_data:
+                self.info = json_data[self.RESOLVED_RESOURCE_JSON_KEY_INFO]
 
 
 # TODO - Response Resolve Payload
