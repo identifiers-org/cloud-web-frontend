@@ -108,6 +108,8 @@ class ResolvedResource:
 
 # TODO - Response Resolve Payload
 class ResponseResolvePayload:
+    RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES = 'resolvedResources'
+
     def __init__(self, json_data=None):
         self.resolved_resources = []
         if json_data:
