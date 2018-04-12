@@ -112,8 +112,12 @@ class ResponseResolvePayload:
 
     def __init__(self, json_data=None):
         self.resolved_resources = []
-        if json_data:
-            pass
+        if json_data \
+                and (self.RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES in json_data) \
+                and (json_data[self.RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES]):
+            self.resolved_resources = [ResolvedResource(json_data=json_data_resolved_resource)
+                                       for json_data_resolved_resource
+                                       in json_data[self.RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES]]
 
 
 # TODO - Server Response to Resolve request
