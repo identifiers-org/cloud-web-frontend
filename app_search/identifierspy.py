@@ -67,7 +67,11 @@ class ResponseResolvePayload:
 
 # TODO - Server Response to Resolve request
 class ServerResponseResolve(ServerResponse):
-    pass
+    def __init__(self, json_data=None):
+        super().__init__(json_data)
+        self.payload = ResponseResolvePayload()
+        # TODO
+
 
 
 # TODO - Resolver Service wrapper / client
