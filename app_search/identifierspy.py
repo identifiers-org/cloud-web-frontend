@@ -120,7 +120,7 @@ class ResponseResolvePayload:
                                        in json_data[self.RESPONSE_RESOLVE_PAYLOAD_JSON_KEY_RESOLVED_RESOURCES]]
 
 
-# TODO - Server Response to Resolve request
+# Server Response to Resolve request
 class ServerResponseResolve(ServerResponse):
     def __init__(self, json_data=None):
         super().__init__(json_data=json_data)
