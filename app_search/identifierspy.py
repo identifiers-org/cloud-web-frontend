@@ -132,4 +132,6 @@ class ServerResponseResolve(ServerResponse):
 
 # TODO - Resolver Service wrapper / client
 class ResolverService:
-    pass
+    def __init__(self, host, port):
+        self.host = host
+        self.port = port
