@@ -75,6 +75,7 @@ class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_INSTITUTION = 'institution'
     RESOLVED_RESOURCE_JSON_KEY_LOCATION = 'location'
     RESOLVED_RESOURCE_JSON_KEY_OFFICIAL = 'official'
+    RESOLVED_RESOURCE_JSON_KEY_RECOMMENDATION = 'recommendation'
 
     def __init__(self, json_data=None):
         self.id = ""
