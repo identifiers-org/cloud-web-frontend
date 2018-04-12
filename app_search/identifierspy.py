@@ -33,6 +33,8 @@ class ServerRequest:
 
 # TODO - Server Response model
 class ServerResponse:
+    SERVER_RESPONSE_API_VERSION_KEY = 'apiVersion'
+
     def __init__(self, json_data=None):
         self.api_version = ""
         self.error_message = ""
