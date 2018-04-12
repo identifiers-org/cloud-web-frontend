@@ -79,7 +79,7 @@ class ResponseResolvePayload:
 # TODO - Server Response to Resolve request
 class ServerResponseResolve(ServerResponse):
     def __init__(self, json_data=None):
-        super().__init__(json_data)
+        super().__init__(json_data=json_data)
         self.payload = ResponseResolvePayload()
         if json_data:
             if (self.SERVER_RESPONSE_KEY_PAYLOAD in json_data) and (json_data[self.SERVER_RESPONSE_KEY_PAYLOAD]):
