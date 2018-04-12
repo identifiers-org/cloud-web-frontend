@@ -60,7 +60,8 @@ class Recommendation:
         self.recommendation_index = 0
         self.recommendation_explanation = "--- Default Recommendation ---"
         if json_data:
-            pass
+            if self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION in json_data:
+                self.recommendation_explanation = json_data[self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION]
 
 
 # TODO - Resolved Resource model
