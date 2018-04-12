@@ -66,7 +66,7 @@ class Recommendation:
                 self.recommendation_index = json_data[self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX]
 
 
-# TODO - Resolved Resource model
+# Resolved Resource model
 class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_ID = 'id'
     RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'resourcePrefix'
