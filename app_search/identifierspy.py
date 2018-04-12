@@ -73,7 +73,8 @@ class ResolvedResource:
 
 # TODO - Response Resolve Payload
 class ResponseResolvePayload:
-    pass
+    def __init__(self, json_data=None):
+        self.resolved_resources = []
 
 
 # TODO - Server Response to Resolve request
