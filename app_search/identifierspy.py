@@ -13,6 +13,7 @@ behind modularizing it here, is that the code is as reusable as possible later o
 """
 
 import abc
+import json
 
 # Constants
 # API Version
@@ -32,7 +33,7 @@ class ServerRequest:
 
 # TODO - Server Response model
 class ServerResponse:
-    def __init__(self):
+    def __init__(self, json_data=None):
         self.api_version = ""
         self.error_message = ""
         self.http_status = 0
