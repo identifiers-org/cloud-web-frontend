@@ -68,7 +68,7 @@ class ResolvedResource:
         self.institution = ""
         self.location = ""
         self.official = False
-        self.recommendation = {}
+        self.recommendation = Recommendation()
 
 
 # TODO - Response Resolve Payload
@@ -85,7 +85,6 @@ class ServerResponseResolve(ServerResponse):
         if json_data:
             if (self.SERVER_RESPONSE_KEY_PAYLOAD in json_data) and (json_data[self.SERVER_RESPONSE_KEY_PAYLOAD]):
                 self.payload = ResponseResolvePayload(json_data=json_data)
-
 
 
 # TODO - Resolver Service wrapper / client
