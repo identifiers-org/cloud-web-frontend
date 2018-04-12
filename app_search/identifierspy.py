@@ -55,7 +55,7 @@ class ServerResponse:
 class Recommendation:
     def __init__(self):
         self.recommendation_index = 0
-        self.recommendation_explanation = ""
+        self.recommendation_explanation = "--- Default Recommendation ---"
 
 
 # TODO - Resolved Resource model
