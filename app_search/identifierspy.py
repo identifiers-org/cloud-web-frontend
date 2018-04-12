@@ -70,6 +70,7 @@ class Recommendation:
 class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_ID = 'id'
     RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'resourcePrefix'
+    RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL = 'accessUrl'
 
     def __init__(self, json_data=None):
         self.id = ""
