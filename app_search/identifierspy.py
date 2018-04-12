@@ -43,7 +43,9 @@ class ServerResponse:
         self.http_status = 0
         self.payload = {}
         if json_data:
-            pass
+            if self.SERVER_RESPONSE_KEY_API_VERSION in json_data:
+                self.api_version = json_data[self.SERVER_RESPONSE_KEY_API_VERSION]
+                
 
 
 # TODO - Recommendation model
