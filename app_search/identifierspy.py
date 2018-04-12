@@ -51,7 +51,7 @@ class ServerResponse:
             # Payload is delegated to specialized responses
 
 
-# TODO - Recommendation model
+# Recommendation model
 class Recommendation:
     RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX = 'recommendationIndex'
     RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION = 'recommendationExplanation'
