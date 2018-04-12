@@ -54,6 +54,7 @@ class ServerResponse:
 # TODO - Recommendation model
 class Recommendation:
     RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX = 'recommendationIndex'
+    RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION = 'recommendationExplanation'
 
     def __init__(self, json_data=None):
         self.recommendation_index = 0
