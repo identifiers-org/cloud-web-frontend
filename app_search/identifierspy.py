@@ -71,6 +71,8 @@ class ResolvedResource:
         self.location = ""
         self.official = False
         self.recommendation = Recommendation()
+        if json_data:
+            pass
 
 
 # TODO - Response Resolve Payload
