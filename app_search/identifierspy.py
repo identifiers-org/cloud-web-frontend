@@ -62,6 +62,8 @@ class Recommendation:
         if json_data:
             if self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION in json_data:
                 self.recommendation_explanation = json_data[self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_EXPLANATION]
+            if self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX in json_data:
+                self.recommendation_index = json_data[self.RECOMMENDATION_JSON_KEY_RECOMMENDATION_INDEX]
 
 
 # TODO - Resolved Resource model
