@@ -31,7 +31,7 @@ class ServerRequest:
         self.payload = {}
 
 
-# TODO - Server Response model
+# Server Response model
 class ServerResponse:
     SERVER_RESPONSE_KEY_API_VERSION = 'apiVersion'
     SERVER_RESPONSE_KEY_ERROR_MESSAGE = 'errorMessage'
