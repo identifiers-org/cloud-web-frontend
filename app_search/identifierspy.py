@@ -110,6 +110,8 @@ class ResolvedResource:
 class ResponseResolvePayload:
     def __init__(self, json_data=None):
         self.resolved_resources = []
+        if json_data:
+            pass
 
 
 # TODO - Server Response to Resolve request
