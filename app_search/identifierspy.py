@@ -56,6 +56,8 @@ class Recommendation:
     def __init__(self, json_data=None):
         self.recommendation_index = 0
         self.recommendation_explanation = "--- Default Recommendation ---"
+        if json_data:
+            pass
 
 
 # TODO - Resolved Resource model
