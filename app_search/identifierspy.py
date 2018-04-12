@@ -24,7 +24,7 @@ scheme = "http"
 
 # TODO - Abstract Services Clients Factory
 
-# TODO - Server Request model
+# Server Request model
 class ServerRequest:
     def __init__(self):
         self.api_version = api_version
