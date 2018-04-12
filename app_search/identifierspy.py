@@ -81,7 +81,8 @@ class ServerResponseResolve(ServerResponse):
     def __init__(self, json_data=None):
         super().__init__(json_data)
         self.payload = ResponseResolvePayload()
-        # TODO
+        if json_data:
+            pass
 
 
 
