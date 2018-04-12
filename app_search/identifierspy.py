@@ -119,7 +119,7 @@ class ServerResponseResolve(ServerResponse):
         self.payload = ResponseResolvePayload()
         if json_data:
             if (self.SERVER_RESPONSE_JSON_KEY_PAYLOAD in json_data) and (json_data[self.SERVER_RESPONSE_JSON_KEY_PAYLOAD]):
-                self.payload = ResponseResolvePayload(json_data=json_data)
+                self.payload = ResponseResolvePayload(json_data=json_data[self.SERVER_RESPONSE_JSON_KEY_PAYLOAD])
 
 
 # TODO - Resolver Service wrapper / client
