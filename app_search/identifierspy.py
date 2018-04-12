@@ -35,7 +35,7 @@ class ServerRequest:
 class ServerResponse:
     SERVER_RESPONSE_KEY_API_VERSION = 'apiVersion'
     SERVER_RESPONSE_KEY_ERROR_MESSAGE = 'errorMessage'
-
+    SERVER_RESPONSE_KEY_PAYLOAD = 'payload'
 
     def __init__(self, json_data=None):
         self.api_version = ""
