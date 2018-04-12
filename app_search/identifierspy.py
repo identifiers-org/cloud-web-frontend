@@ -87,7 +87,8 @@ class ResolvedResource:
         self.official = False
         self.recommendation = Recommendation()
         if json_data:
-            pass
+            if self.RESOLVED_RESOURCE_JSON_KEY_ID in json_data:
+                self.id = json_data[self.RESOLVED_RESOURCE_JSON_KEY_ID]
 
 
 # TODO - Response Resolve Payload
