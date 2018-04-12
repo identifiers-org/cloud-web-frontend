@@ -48,7 +48,15 @@ class Recommendation:
 
 # TODO - Resolved Resource model
 class ResolvedResource:
-    pass
+    def __init__(self):
+        self.id = ""
+        self.resource_prefix = ""
+        self.access_url = ""
+        self.info = ""
+        self.institution = ""
+        self.location = ""
+        self.official = False
+        self.recommendation = {}
 
 
 # TODO - Response Resolve Payload
