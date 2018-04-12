@@ -69,6 +69,7 @@ class Recommendation:
 # TODO - Resolved Resource model
 class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_ID = 'id'
+    RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'resourcePrefix'
 
     def __init__(self, json_data=None):
         self.id = ""
