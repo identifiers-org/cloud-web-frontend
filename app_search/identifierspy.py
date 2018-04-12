@@ -38,6 +38,8 @@ class ServerResponse:
         self.error_message = ""
         self.http_status = 0
         self.payload = {}
+        if json_data:
+            pass
 
 
 # TODO - Recommendation model
