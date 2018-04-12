@@ -34,7 +34,7 @@ class ServerRequest:
 # Server Response model
 class ServerResponse:
     SERVER_RESPONSE_JSON_KEY_API_VERSION = 'apiVersion'
-    SERVER_RESPONSE_KEY_ERROR_MESSAGE = 'errorMessage'
+    SERVER_RESPONSE_JSON_KEY_ERROR_MESSAGE = 'errorMessage'
     SERVER_RESPONSE_KEY_PAYLOAD = 'payload'
 
     def __init__(self, json_data=None):
@@ -46,8 +46,8 @@ class ServerResponse:
             if self.SERVER_RESPONSE_JSON_KEY_API_VERSION in json_data:
                 self.api_version = json_data[self.SERVER_RESPONSE_JSON_KEY_API_VERSION]
                 # TODO - We should check the API Version in the response matches the one supported here
-            if self.SERVER_RESPONSE_KEY_ERROR_MESSAGE in json_data:
-                self.error_message = json_data[self.SERVER_RESPONSE_KEY_ERROR_MESSAGE]
+            if self.SERVER_RESPONSE_JSON_KEY_ERROR_MESSAGE in json_data:
+                self.error_message = json_data[self.SERVER_RESPONSE_JSON_KEY_ERROR_MESSAGE]
             # Payload is delegated to specialized responses
 
 
