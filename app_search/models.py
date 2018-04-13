@@ -20,12 +20,11 @@ class ResolutionServiceLocationFactory:
 
 
 class ResolutionModel:
-    @staticmethod
-    def resolve(compact_id):
+
+    def resolve(self, compact_id):
         pass
 
-    @staticmethod
-    def resolve_with_selector(compact_id, selector):
+    def resolve_with_selector(self, compact_id, selector):
         pass
 
 
