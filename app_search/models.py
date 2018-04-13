@@ -24,7 +24,9 @@ class ResolutionModel:
     def resolve(compact_id):
         pass
 
-    
+    @staticmethod
+    def resolve_with_selector(compact_id, selector):
+        pass
 
 
 class ResolutionEngine:
