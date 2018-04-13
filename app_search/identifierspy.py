@@ -14,6 +14,7 @@ behind modularizing it here, is that the code is as reusable as possible later o
 
 import abc
 import json
+import requests
 
 # Constants
 # API Version
@@ -151,6 +152,12 @@ class ResolverService:
         if selector:
             endpoint = "{}/{}".format(endpoint, selector)
         endpoint = "{}/{}".format(endpoint, compact_id)
+        response = requests.get(endpoint, headers={"Content-Type": "application/json"})
+        server_response = ServerResponseResolve()
+        if response.content:
+            server_response = ServerResponseResolve(json_data=response.json())
+        server_response.http_status = response.status_code
+        return server_response
 
     def get_highest_recommended_resolved_resource(self, resolved_resources=[]):
         pass
