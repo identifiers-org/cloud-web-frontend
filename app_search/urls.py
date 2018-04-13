@@ -19,3 +19,4 @@ urlpatterns = [
     re_path('^(?P<selector>.+)/(?P<compact_id>.+)$', app_search_views.resolve_with_selector),
     re_path('^(?P<compact_id>.+)$', app_search_views.resolve),
 ]
+
