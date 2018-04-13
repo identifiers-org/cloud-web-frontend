@@ -167,16 +167,16 @@ class AppConfigManager(ConfigurationManager):
         self._logger = logging.getLogger("{}.{}".format(__name__, type(self).__name__))
         self._logger.setLevel(getattr(logging, _log_level))
         # TODO fix this code
-        for llevel, lformat in _logger_formatters.items():
-            logfile = os.path.join(self.get_folder_logs(),
-                                   log_handlers_prefix + llevel.lower() + log_handlers_extension)
-            lformatter = logging.Formatter(lformat)
-            lhandler = logging.FileHandler(logfile, mode='w')
-            lhandler.setLevel(getattr(logging, llevel))
-            lhandler.setFormatter(lformatter)
-            self.__log_handlers.append(lhandler)
-            # Add the handlers to my own logger
-            self._logger.addHandler(lhandler)
+        # for llevel, lformat in _logger_formatters.items():
+        #     logfile = os.path.join(self.get_folder_logs(),
+        #                            log_handlers_prefix + llevel.lower() + log_handlers_extension)
+        #     lformatter = logging.Formatter(lformat)
+        #     lhandler = logging.FileHandler(logfile, mode='w')
+        #     lhandler.setLevel(getattr(logging, llevel))
+        #     lhandler.setFormatter(lformatter)
+        #     self.__log_handlers.append(lhandler)
+        #     # Add the handlers to my own logger
+        #     self._logger.addHandler(lhandler)
         if is_show_logs_on_console():
             lhandler = logging.StreamHandler(stream=sys.stdout)
             lhandler.setLevel(getattr(logging, _console_log_level))
