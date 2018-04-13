@@ -148,7 +148,8 @@ class ResolverService:
 
     def resolve(self, compact_id, selector=None):
         endpoint = self.get_base_endpoint(host=self.host, port=self.port)
-        # TODO
+        if selector:
+            endpoint = "{}/{}".format(endpoint, selector)
 
     def get_highest_recommended_resolved_resource(self, resolved_resources=[]):
         pass
