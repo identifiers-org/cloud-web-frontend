@@ -36,7 +36,13 @@ class ResolutionModel:
         return server_response, resolved_resource
 
     def resolve_with_selector(self, compact_id, selector):
-        pass
+        host, port = ResolutionServiceLocationFactory.get_resolver_host_and_port()
+        resolver = ApiServicesFactory.get_resolver(host=host, port=port)
+        server_response = resolver.resolve(compact_id, selector)
+        resolved_resource = None
+        if server_response.http_status == 200:
+            resolved_resource = server_response.payload.resolved_resources[0]
+        return server_response, resolved_resource
 
 
 class ResolutionEngine:
