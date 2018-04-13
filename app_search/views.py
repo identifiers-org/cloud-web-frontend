@@ -1,6 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import HomePage as HomePageModel
+from .models import ResolutionModel
+# Application imports
+import config_manager
+
+# Views logger
+logger = config_manager.get_app_config_manager().get_logger_for(__name__)
 
 # Create your views here.
 
