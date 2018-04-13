@@ -48,7 +48,7 @@ _logger_formatters = {
     "INFO": "%(asctime)s [%(levelname)7s][%(name)18s] %(message)s"
 }
 _log_level = 'DEBUG'
-_console_log_level = 'INFO'
+_console_log_level = 'DEBUG'
 
 
 def set_application_config_file(configuration_file):
