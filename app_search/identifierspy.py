@@ -144,10 +144,11 @@ class ResolverService:
 
     @staticmethod
     def get_base_endpoint(host, port):
-        return scheme + '://' + host + ':' + port
+        return "{}://{}:{}".format(scheme, host, port)
 
     def resolve(self, compact_id, selector=None):
-        pass
+        endpoint = self.get_base_endpoint(host=self.host, port=self.port)
+        # TODO
 
     def get_highest_recommended_resolved_resource(self, resolved_resources=[]):
         pass
