@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseServerError
 from django.shortcuts import render
 from .models import HomePage as HomePageModel
 from .models import ResolutionModel
@@ -26,11 +26,15 @@ def resolve(request, compact_id):
     log_message = "Resolution request received for Compact ID {}".format(compact_id)
     logger.debug(log_message)
     model = ResolutionModel()
-    selected_resolved_resource = model.resolve(compact_id)
+    server_response, selected_resolved_resource = model.resolve(compact_id)
+    if server_response.http_status != 200:
+        # TODO - We should redirect to an error page
+        return HttpResponse(server_response.error_message, status=server_response.http_status)
     if selected_resolved_resource:
-        pass
-    # TODO - Else, handle error
-    return HttpResponse(log_message)
+        return HttpResponseRedirect(selected_resolved_resource.access_url)
+    # Handle error where no resource could be selected
+    return HttpResponseServerError("Request for Compact ID '{}' could not be completed "
+                                   "due to an error selecting a suitable provider".format(compact_id))
 
 
 def resolve_with_selector(request, selector, compact_id):
