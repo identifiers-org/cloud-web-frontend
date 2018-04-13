@@ -22,8 +22,8 @@ def resolve(request, compact_id):
     log_message = ""
     if (compact_id == 'favicon.ico'):
         logger.info("[Hack] Ignoring request on 'favicon.ico'")
-    else:
-        log_message = "Resolution request received for Compact ID {}".format(compact_id)
+        return HttpResponse(log_message)
+    log_message = "Resolution request received for Compact ID {}".format(compact_id)
     logger.debug(log_message)
     return HttpResponse(log_message)
 
