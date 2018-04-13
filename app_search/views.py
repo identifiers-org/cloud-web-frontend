@@ -12,7 +12,8 @@ def home_page(request):
 
 
 def resolve(request, compact_id):
-    return HttpResponse("Resolution request received for Compact ID {}".format(compact_id))
+    log_message = "Resolution request received for Compact ID {}".format(compact_id)
+    return HttpResponse(log_message)
 
 
 def resolve_with_selector(request, selector, compact_id):
