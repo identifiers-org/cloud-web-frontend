@@ -29,8 +29,11 @@ class ResolutionModel:
     def resolve(self, compact_id):
         host, port = ResolutionServiceLocationFactory.get_resolver_host_and_port()
         resolver = ApiServicesFactory.get_resolver(host=host, port=port)
-        resolved_resource = resolver.resolve(compact_id)
-        # TODO
+        server_response = resolver.resolve(compact_id)
+        resolved_resource = None
+        if server_response.http_status == 200:
+            resolved_resource = resolver.get_highest_recommended_resolved_resource(server_response.payload.resolved_resources)
+        return server_response, resolved_resource
 
     def resolve_with_selector(self, compact_id, selector):
         pass
