@@ -1,6 +1,7 @@
 import os
 from django.db import models
 # Application imports
+import config_manager
 from .identifierspy import ApiServicesFactory
 
 
@@ -20,6 +21,10 @@ class ResolutionServiceLocationFactory:
 
 
 class ResolutionModel:
+    def __init__(self):
+        self.logger = config_manager \
+            .get_app_config_manager() \
+            .get_logger_for("{}.{}".format(__name__, type(self).__name__))
 
     def resolve(self, compact_id):
         pass
