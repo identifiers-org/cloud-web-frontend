@@ -21,8 +21,10 @@ class ResolutionServiceLocationFactory:
 
 class ResolutionModel:
     @staticmethod
-    def resolve_compact_id(compact_id):
+    def resolve(compact_id):
         pass
+
+    
 
 
 class ResolutionEngine:
