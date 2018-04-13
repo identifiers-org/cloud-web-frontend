@@ -25,5 +25,6 @@ def resolve(request, compact_id):
 
 def resolve_with_selector(request, selector, compact_id):
     log_message = "Resolution request received for Compact ID {}, using selector {}".format(compact_id, selector)
+    logger.debug(log_message)
     return HttpResponse(log_message)
 
