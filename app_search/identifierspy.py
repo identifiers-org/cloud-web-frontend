@@ -142,6 +142,10 @@ class ResolverService:
         self.host = host
         self.port = port
 
+    @staticmethod
+    def get_base_endpoint(host, port):
+        return scheme + '://' + host + ':' + port
+
     def resolve(self, compact_id, selector=None):
         pass
 
