@@ -135,3 +135,6 @@ class ResolverService:
     def __init__(self, host, port):
         self.host = host
         self.port = port
+
+    def resolve(self, compact_id, selector=None):
+        pass
