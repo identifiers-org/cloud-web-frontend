@@ -25,6 +25,11 @@ def resolve(request, compact_id):
         return HttpResponse(log_message)
     log_message = "Resolution request received for Compact ID {}".format(compact_id)
     logger.debug(log_message)
+    model = ResolutionModel()
+    selected_resolved_resource = model.resolve(compact_id)
+    if selected_resolved_resource:
+        pass
+    # TODO - Else, handle error
     return HttpResponse(log_message)
 
 
