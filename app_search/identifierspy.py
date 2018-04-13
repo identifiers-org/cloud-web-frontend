@@ -15,6 +15,8 @@ behind modularizing it here, is that the code is as reusable as possible later o
 import abc
 import json
 import requests
+# Application imports
+import config_manager
 
 # Constants
 # API Version
@@ -140,6 +142,9 @@ class ServerResponseResolve(ServerResponse):
 # TODO - Resolver Service wrapper / client
 class ResolverService:
     def __init__(self, host, port):
+        self.logger = config_manager \
+            .get_app_config_manager() \
+            .get_logger_for("{}.{}".format(__name__, type(self).__name__))
         self.host = host
         self.port = port
 
