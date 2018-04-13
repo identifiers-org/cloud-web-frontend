@@ -138,3 +138,6 @@ class ResolverService:
 
     def resolve(self, compact_id, selector=None):
         pass
+
+    def get_highest_recommended_resolved_resource(self, resolved_resources=[]):
+        pass
