@@ -159,7 +159,8 @@ class ResolverService:
         endpoint = "{}/{}".format(endpoint, compact_id)
         self.logger.debug("Resolve request to endpoint '{}'".format(endpoint))
         response = requests.get(endpoint, headers={"Content-Type": "application/json"})
-        self.logger.debug("")
+        self.logger.debug("Endpoint request to '{}', response status '{}', content '{}'"
+                          .format(endpoint, response.status_code, response.content))
         server_response = ServerResponseResolve()
         if response.content:
             server_response = ServerResponseResolve(json_data=response.json())
