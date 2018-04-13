@@ -27,7 +27,10 @@ class ResolutionModel:
             .get_logger_for("{}.{}".format(__name__, type(self).__name__))
 
     def resolve(self, compact_id):
-        pass
+        host, port = ResolutionServiceLocationFactory.get_resolver_host_and_port()
+        resolver = ApiServicesFactory.get_resolver(host=host, port=port)
+        resolved_resource = resolver.resolve(compact_id)
+        # TODO
 
     def resolve_with_selector(self, compact_id, selector):
         pass
