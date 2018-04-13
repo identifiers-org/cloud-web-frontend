@@ -19,6 +19,7 @@ def home_page(request):
 
 def resolve(request, compact_id):
     log_message = "Resolution request received for Compact ID {}".format(compact_id)
+    logger.debug(log_message)
     return HttpResponse(log_message)
 
 
