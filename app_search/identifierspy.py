@@ -135,7 +135,7 @@ class ServerResponseResolve(ServerResponse):
         self.payload = ResponseResolvePayload()
         if json_data:
             if (self.SERVER_RESPONSE_JSON_KEY_PAYLOAD in json_data) and (
-            json_data[self.SERVER_RESPONSE_JSON_KEY_PAYLOAD]):
+                    json_data[self.SERVER_RESPONSE_JSON_KEY_PAYLOAD]):
                 self.payload = ResponseResolvePayload(json_data=json_data[self.SERVER_RESPONSE_JSON_KEY_PAYLOAD])
 
 
@@ -168,4 +168,8 @@ class ResolverService:
         return server_response
 
     def get_highest_recommended_resolved_resource(self, resolved_resources=[]):
-        pass
+        if resolved_resources:
+            return sorted(resolved_resources,
+                          key=lambda resolved_resource: resolved_resource.recommendation.recommendation_index,
+                          reverse=True)[0]
+        return None
