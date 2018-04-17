@@ -19,19 +19,25 @@
 <div class="container">
     <div class="row">
         <div id="search_area">
-            <div class="col-sm">
-                <div id="logo_resolve"><img src="static/img/identifiers_logo.png"></div>
-                <div id="logo_text"><h1>Identifiers.org</h1></div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div id="logo_resolve"><img src="static/img/identifiers_logo.png"></div>
+                </div>
+                <div class="col-xs-6">
+                    <div id="logo_text"><h1>Identifiers.org</h1></div>
+                </div>
             </div>
-            <div id="search_box">
-                <form id="resolution_form" method="post">
-                    <input id="resolve_input_box" name="compact_id"
-                           placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
-                    <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
-                    <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
-                    </button>
-                    {% csrf_token %}
-                </form>
+            <div class="row">
+                <div id="search_box">
+                    <form id="resolution_form" method="post">
+                        <input id="resolve_input_box" name="compact_id"
+                               placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
+                        <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
+                        <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
+                        </button>
+                        {% csrf_token %}
+                    </form>
+                </div>
             </div>
             <div id="message_banner" hidden></div>
             <div id="resolution_results"></div>
