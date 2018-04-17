@@ -30,17 +30,11 @@
             <div class="row">
                 <div id="search_box">
                     <form id="resolution_form" method="post">
-                        <div class="col-xs-6">
-                            <input id="resolve_input_box" name="compact_id"
-                                   placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
-                        </div>
-                        <div class="col-xs-6">
-                            <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
-                        </div>
-                        <div class="col-xs-6">
-                            <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
-                            </button>
-                        </div>
+                        <input id="resolve_input_box" name="compact_id"
+                               placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
+                        <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
+                        <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
+                        </button>
                         {% csrf_token %}
                     </form>
                 </div>
