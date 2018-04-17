@@ -12,22 +12,28 @@
             src="http://js-identifiers-org.s3.us-east-1.amazonaws.com/identifiersjs/identifiers.js" async>
     </script>
     <script type="application/javascript" src="/static/js/app_search_home.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
-<div id="search_area">
-    <div id="logo_resolve"></div>
-    <div id="logo_text">Identifiers.org</div>
-    <div id="search_box">
-        <form id="resolution_form" method="post">
-            <input id="resolve_input_box" name="compact_id"
-                   placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
-            <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
-            <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky</button>
-            {% csrf_token %}
-        </form>
+<div class="container">
+    <div class="row">
+        <div id="search_area">
+            <div id="logo_resolve"><img src="static/img/identifiers_logo.png"></div>
+            <div id="logo_text"><h1>Identifiers.org</h1></div>
+            <div id="search_box">
+                <form id="resolution_form" method="post">
+                    <input id="resolve_input_box" name="compact_id"
+                           placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"/>
+                    <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
+                    <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
+                    </button>
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div id="message_banner" hidden></div>
+            <div id="resolution_results"></div>
+        </div>
     </div>
-</div>
-<div id="message_banner" hidden></div>
-<div id="resolution_results"></div>
 </body>
 </html>
