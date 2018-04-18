@@ -91,12 +91,7 @@ var AppSearchHomePageGlue = (function () {
         document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
             event.preventDefault();
             resolutionResultsController.reset();
-            // Sync this search box with the other one
-            document.getElementById(that.navBarInputTextId).value = that.getInputCompactId(that.inputTextId);
-            // Hide the main search box
-            document.getElementById(that.resolutionFormId).setAttribute("hidden");
-            // Unhide the search box that is running in the navigation bar
-            document.getElementById(that.navBarResolutionFormId).removeAttribute("hidden");
+            // TODO - Swap search areas
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
