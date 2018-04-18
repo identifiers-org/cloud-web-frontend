@@ -144,7 +144,7 @@ var AppSearchHomePageGlue = (function () {
             // Location Information
             locationDiv = document.createElement('div');
             locationDiv.setAttribute('id', resolvedResource.id + "_location");
-            
+            locationDiv.setAttribute('class', 'searchResultLocation');
             locationDiv.innerText = resolvedResource.location;
             // Put everything together
             resourceDiv.appendChild(accessUrlDiv);
