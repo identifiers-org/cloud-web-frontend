@@ -23,6 +23,8 @@ var AppSearchHomePageGlue = (function () {
             "btn_resolve_lucky");
         messageBannerController = new MessageBannerController('message_banner');
         resolutionResultsController = new ResolutionResultsController('resolution_results');
+        // Set the focus on the search box
+        document.getElementById('resolve_input_box').focus();
     }
 
     // Resolution request controller
@@ -82,12 +84,25 @@ var AppSearchHomePageGlue = (function () {
             event.preventDefault();
             // TODO - Change this to 'resolve' instead of redirection
             // Resolve Compact ID
-            getResolvedResources(function (resolvedResources) {
+            /*getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
                     // Select Highest Scored Resolved Resource
                     resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
                     // TODO - Perfect place for metrics collection
                     location.replace(resolvedResource.accessUrl);
+                }
+            }, that.getInputCompactId());
+            return false;
+        });*/
+            getResolvedResources(function (resolvedResources) {
+                if (resolvedResources) {
+                    if (resolvedResources.length == 1) {
+                        // If there's only one Resolved Resource, redirect
+                        // TODO - Perfect place for metrics collection
+                        location.replace(resolvedResources[0].accessUrl);
+                    }
+                    // Tell the Resolved Resource display to show the options
+                    resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
             }, that.getInputCompactId());
             return false;
