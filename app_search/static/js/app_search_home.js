@@ -146,6 +146,7 @@ var AppSearchHomePageGlue = (function () {
         that = this;
         document.getElementById(this.resolutionFormId).addEventListener("submit", function (event) {
             event.preventDefault();
+            resolutionResultsController.reset();
             // TODO - Change this to 'resolve' instead of redirection
             // Resolve Compact ID
             /*getResolvedResources(function (resolvedResources) {
@@ -176,6 +177,7 @@ var AppSearchHomePageGlue = (function () {
         // TODO - Maybe refactor this later on
         document.getElementById(this.navBarResolutionFormId).addEventListener("submit", function (event) {
             event.preventDefault();
+            resolutionResultsController.reset();
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
                     if (resolvedResources.length == 1) {
