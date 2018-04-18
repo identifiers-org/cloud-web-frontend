@@ -100,7 +100,8 @@ var AppSearchHomePageGlue = (function () {
         document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
             event.preventDefault();
             resolutionResultsController.reset();
-            // TODO - Swap search areas
+            // Swap search areas
+            that.swapSearchAreas();
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
