@@ -86,6 +86,15 @@ var AppSearchHomePageGlue = (function () {
         });
     };
 
+    ResolutionRequestController.prototype.swapSearchAreas = function () {
+        // Sync this search box with the other one
+        document.getElementById(this.navBarInputTextId).value = that.getInputCompactId(this.inputTextId);
+        // Hide the main search box
+        document.getElementById(this.resolutionFormId).setAttribute("hidden");
+        // Unhide the search box that is running in the navigation bar
+        document.getElementById(this.navBarResolutionFormId).removeAttribute("hidden");
+    }
+
     ResolutionRequestController.prototype.clickBtnResolveListenerSetup = function () {
         that = this;
         document.getElementById(this.btnResolveId).addEventListener("click", function (event) {
