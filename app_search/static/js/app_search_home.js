@@ -28,7 +28,14 @@ var AppSearchHomePageGlue = (function () {
     }
 
     // Resolution request controller
-    function ResolutionRequestController(resolutionFormId, inputTextId, btnResolveId, btnLuckyId) {
+    function ResolutionRequestController(resolutionFormId,
+                                         inputTextId,
+                                         btnResolveId,
+                                         btnLuckyId,
+                                         navBarResolutionFormId,
+                                         navBarInputTextId,
+                                         navBarBtnResolveId,
+                                         navBarBtnLuckyId) {
         this.resolutionFormId = resolutionFormId;
         this.inputTextId = inputTextId;
         this.btnResolveId = btnResolveId;
