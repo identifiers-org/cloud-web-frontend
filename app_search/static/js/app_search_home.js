@@ -160,9 +160,9 @@ var AppSearchHomePageGlue = (function () {
     };
     // END --- Resolution request controller
 
-    ResolutionRequestController.prototype.getInputCompactId = function () {
+    ResolutionRequestController.prototype.getInputCompactId = function (inputTextElementId) {
         console.debug("Get the Compact ID entered");
-        return document.getElementById(this.inputTextId).value;
+        return document.getElementById(inputTextElementId).value;
     };
 
     // Resolution Results Controller
