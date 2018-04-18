@@ -27,19 +27,15 @@
         <div id="navbar_logo_text" class="col-xs-5" style="margin: 5px 0px 0px 0px">
             <h3>Identifiers.org</h3>
         </div>
-        <div id="navbar_search_box">
+        <div id="navbar_search_box" class="col-xs-5">
             <form id="navbar_resolution_form" method="post">
-                <div class="col-xs-5">
-                    <input id="navbar_resolve_input_box" name="compact_id"
-                           placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"
-                           style="min-width: 410px; max-width: 440px;width: 60vh; margin: 0px 0px 15px 0px"/>
-                </div>
-                <div class="col-xs-5">
-                    <button id="navbar_btn_resolve" type="button" name="btn_resolve">Resolve</button>
-                    <button id="navbar_btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be
-                        lucky
-                    </button>
-                </div>
+                <input id="navbar_resolve_input_box" name="compact_id"
+                       placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"
+                       style="min-width: 410px; max-width: 440px;width: 60vh; margin: 0px 0px 15px 0px"/>
+                <button id="navbar_btn_resolve" type="button" name="btn_resolve">Resolve</button>
+                <button id="navbar_btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be
+                    lucky
+                </button>
                 {% csrf_token %}
             </form>
         </div>
