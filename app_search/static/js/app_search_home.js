@@ -95,7 +95,8 @@ var AppSearchHomePageGlue = (function () {
             document.getElementById(that.navBarInputTextId).value = that.getInputCompactId(that.inputTextId);
             // Hide the main search box
             document.getElementById(that.resolutionFormId).setAttribute("hidden");
-            // TODO - Unhide the search box that is running in the navigation bar
+            // Unhide the search box that is running in the navigation bar
+            document.getElementById(that.navBarResolutionFormId).removeAttribute("hidden");
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
