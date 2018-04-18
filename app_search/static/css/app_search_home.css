@@ -11,16 +11,19 @@
     font-size: 14px;
     color: #006621;
     font-style: normal;
+    margin: 0px 0px 0px 0px;
 }
 
 .searchResultInstitution {
-
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
 }
 
 .searchResultRecommendationIndex {
-
+    margin: 0px 0px 0px 0px;
 }
 
 .searchResultLocation {
-
+    margin: 0px 0px 0px 0px;
 }
