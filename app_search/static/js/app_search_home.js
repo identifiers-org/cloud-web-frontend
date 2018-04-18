@@ -24,7 +24,9 @@ var AppSearchHomePageGlue = (function () {
             "navbar_resolution_form",
             "navbar_resolve_input_box",
             "navbar_btn_resolve",
-            "navbar_btn_resolve_lucky");
+            "navbar_btn_resolve_lucky",
+            "search_area",
+            "navbar_search_area");
         messageBannerController = new MessageBannerController('message_banner');
         resolutionResultsController = new ResolutionResultsController('resolution_results');
         // Set the focus on the search box
@@ -39,7 +41,9 @@ var AppSearchHomePageGlue = (function () {
                                          navBarResolutionFormId,
                                          navBarInputTextId,
                                          navBarBtnResolveId,
-                                         navBarBtnLuckyId) {
+                                         navBarBtnLuckyId,
+                                         mainSearchAreaId,
+                                         navBarSearchAreaId) {
         this.resolutionFormId = resolutionFormId;
         this.inputTextId = inputTextId;
         this.btnResolveId = btnResolveId;
@@ -48,6 +52,8 @@ var AppSearchHomePageGlue = (function () {
         this.navBarInputTextId = navBarInputTextId;
         this.navBarBtnResolveId = navBarBtnResolveId;
         this.navBarBtnLuckyId = navBarBtnLuckyId;
+        this.mainSearchAreaId = mainSearchAreaId;
+        this.navBarSearchAreaId = navBarSearchAreaId;
         console.debug("Wiring the Resolution Request Controller");
         // Attach events
         this.clickBtnLuckyListenerSetup();
