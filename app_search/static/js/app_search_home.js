@@ -105,7 +105,7 @@ var AppSearchHomePageGlue = (function () {
                     // Tell the Resolved Resource display to show the options
                     resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
-            }, that.getInputCompactId());
+            }, that.getInputCompactId(that.inputTextId));
             return false;
         });
         // TODO - Refactor this out later
