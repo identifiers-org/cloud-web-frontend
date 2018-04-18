@@ -121,7 +121,7 @@ var AppSearchHomePageGlue = (function () {
             // Resource AccessUrl
             accessUrlDiv = document.createElement('div');
             accessUrlDiv.setAttribute('id', resolvedResource.id + "_accessUrl");
-            accessUrlDiv.setAttribute('class', 'searchResultAccessUrl')
+            accessUrlDiv.setAttribute('class', 'searchResultAccessUrl');
             accessUrlLink = document.createElement('a');
             accessUrlLink.setAttribute('href', resolvedResource.accessUrl);
             accessUrlLink.innerText = resolvedResource.info;
@@ -129,6 +129,7 @@ var AppSearchHomePageGlue = (function () {
             // Access URL plain text
             accessUrlPlainText = document.createElement('div');
             accessUrlPlainText.setAttribute('id', resolvedResource.id + "_accessUrlPlainText");
+            accessUrlPlainText.setAttribute('class', 'searchResultAccessUrlText');
             accessUrlPlainText.innerText = resolvedResource.accessUrl;
             // Resource institution information
             institutionInfoDiv = document.createElement('div');
