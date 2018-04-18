@@ -134,6 +134,7 @@ var AppSearchHomePageGlue = (function () {
             // Resource institution information
             institutionInfoDiv = document.createElement('div');
             institutionInfoDiv.setAttribute('id', resolvedResource.id + "_institution");
+            institutionInfoDiv.setAttribute('class', 'searchResultInstitution');
             institutionInfoDiv.innerText = resolvedResource.institution;
             // Recommendation Score / Index
             recommendationIndexDiv = document.createElement('div');
