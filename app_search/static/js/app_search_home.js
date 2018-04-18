@@ -139,10 +139,12 @@ var AppSearchHomePageGlue = (function () {
             // Recommendation Score / Index
             recommendationIndexDiv = document.createElement('div');
             recommendationIndexDiv.setAttribute('id', resolvedResource.id + "_recommendationIndex");
+            recommendationIndexDiv.setAttribute('class', 'searchResultRecommendationIndex');
             recommendationIndexDiv.innerText = "Score: " + resolvedResource.recommendation.recommendationIndex;
             // Location Information
             locationDiv = document.createElement('div');
             locationDiv.setAttribute('id', resolvedResource.id + "_location");
+            
             locationDiv.innerText = resolvedResource.location;
             // Put everything together
             resourceDiv.appendChild(accessUrlDiv);
