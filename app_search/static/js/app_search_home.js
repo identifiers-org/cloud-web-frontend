@@ -20,7 +20,11 @@ var AppSearchHomePageGlue = (function () {
         resolutionRequestController = new ResolutionRequestController("resolution_form",
             "resolve_input_box",
             "btn_resolve",
-            "btn_resolve_lucky");
+            "btn_resolve_lucky",
+            "navbar_resolution_form",
+            "navbar_resolve_input_box",
+            "navbar_btn_resolve",
+            "navbar_btn_resolve_lucky");
         messageBannerController = new MessageBannerController('message_banner');
         resolutionResultsController = new ResolutionResultsController('resolution_results');
         // Set the focus on the search box
