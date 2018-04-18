@@ -90,7 +90,7 @@ var AppSearchHomePageGlue = (function () {
         // Sync this search box with the other one
         document.getElementById(this.navBarInputTextId).value = that.getInputCompactId(this.inputTextId);
         // Hide the main search box
-        document.getElementById(this.resolutionFormId).setAttribute("hidden");
+        document.getElementById(this.resolutionFormId).setAttribute("hidden", true);
         // Unhide the search box that is running in the navigation bar
         document.getElementById(this.navBarResolutionFormId).removeAttribute("hidden");
     }
