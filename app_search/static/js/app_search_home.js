@@ -81,7 +81,7 @@ var AppSearchHomePageGlue = (function () {
                     // TODO - Perfect place for metrics collection
                     location.replace(resolvedResource.accessUrl);
                 }
-            }, that.getInputCompactId());
+            }, that.getInputCompactId(that.navBarInputTextId));
             return false;
         });
     };
