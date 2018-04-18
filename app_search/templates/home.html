@@ -18,41 +18,43 @@
 </head>
 <body>
 <div class="container">
-<div style="height: 100vh">
-    <div class="row v-100 h-100 justify-content-center align-items-center">
-        <div id="search_area">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-xs-5">
-                    <div id="logo_resolve" style="margin: 0px 10px 10px 0px"><img src="static/img/identifiers_logo.png">
+    <div style="height: 100vh">
+        <div class="row v-100 h-100 justify-content-center align-items-center">
+            <div id="search_area">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xs-5">
+                        <div id="logo_resolve" style="margin: 0px 10px 10px 0px"><img
+                                src="static/img/identifiers_logo.png">
+                        </div>
+                    </div>
+                    <div class="col-xs-5" style="margin: 5px 0px 0px 0px">
+                        <div id="logo_text"><h1>Identifiers.org</h1></div>
                     </div>
                 </div>
-                <div class="col-xs-5" style="margin: 5px 0px 0px 0px">
-                    <div id="logo_text"><h1>Identifiers.org</h1></div>
+                <div class="row" style="margin: 0px 0px 25px 0px">
+                    <div id="search_box">
+                        <form id="resolution_form" method="post">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input id="resolve_input_box" name="compact_id"
+                                           placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"
+                                           style="min-width: 410px; max-width: 440px;width: 60vh; margin: 0px 0px 15px 0px"/>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-xs-4">
+                                    <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
+                                    <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be
+                                        lucky
+                                    </button>
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="row" style="margin: 0px 0px 25px 0px">
-                <div id="search_box">
-                    <form id="resolution_form" method="post">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <input id="resolve_input_box" name="compact_id"
-                                       placeholder="Enter a Compact ID, e.g. CHEBI:36927 and press Enter"
-                                       style="min-width: 410px; max-width: 440px;width: 60vh; margin: 0px 0px 15px 0px"/>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-xs-4">
-                                <button id="btn_resolve" type="button" name="btn_resolve">Resolve</button>
-                                <button id="btn_resolve_lucky" type="button" name="btn_resolve_lucky">I'm gonna be lucky
-                                </button>
-                            </div>
-                        </div>
-                        {% csrf_token %}
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="container"> -->
+            <!-- <div class="container"> -->
             <div class="row">
                 <div id="message_banner" hidden></div>
             </div>
