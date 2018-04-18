@@ -40,6 +40,10 @@ var AppSearchHomePageGlue = (function () {
         this.inputTextId = inputTextId;
         this.btnResolveId = btnResolveId;
         this.btnLuckyId = btnLuckyId;
+        this.navBarResolutionFormId = navBarResolutionFormId;
+        this.navBarInputTextId = navBarInputTextId;
+        this.navBarBtnResolveId = navBarBtnResolveId;
+        this.navBarBtnLuckyId = navBarBtnLuckyId;
         console.debug("Wiring the Resolution Request Controller");
         // Attach events
         this.clickBtnLuckyListenerSetup();
