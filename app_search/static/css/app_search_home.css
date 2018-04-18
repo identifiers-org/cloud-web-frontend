@@ -11,19 +11,24 @@
     font-size: 14px;
     color: #006621;
     font-style: normal;
-    margin: 0px 0px 0px 0px;
+    line-height: 1;
 }
 
 .searchResultInstitution {
     font-size: 16px;
     font-weight: bold;
-    margin: 0px 0px 0px 0px;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .searchResultRecommendationIndex {
-    margin: 0px 0px 0px 0px;
+    font-size: 14px;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .searchResultLocation {
-    margin: 0px 0px 0px 0px;
+    font-size: 14px;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
