@@ -5,7 +5,9 @@
 }
 
 .searchResultAccessUrl {
-
+    font-size: 14px;
+    color: #006621;
+    font-style: normal;
 }
 
 .searchResultAccessUrlText {
