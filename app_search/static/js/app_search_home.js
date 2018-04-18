@@ -158,6 +158,8 @@ var AppSearchHomePageGlue = (function () {
             }, that.getInputCompactId());
             return false;
         });*/
+            // Swap search areas
+            that.swapSearchAreas();
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
                     if (resolvedResources.length == 1) {
