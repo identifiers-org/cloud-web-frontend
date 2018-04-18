@@ -105,6 +105,24 @@ var AppSearchHomePageGlue = (function () {
             }, that.getInputCompactId());
             return false;
         });
+        // TODO - Refactor this out later
+        document.getElementById(this.navBarBtnResolveId).addEventListener("click", function (event) {
+            event.preventDefault();
+            resolutionResultsController.reset();
+            // Resolve Compact ID
+            getResolvedResources(function (resolvedResources) {
+                if (resolvedResources) {
+                    if (resolvedResources.length == 1) {
+                        // If there's only one Resolved Resource, redirect
+                        // TODO - Perfect place for metrics collection
+                        location.replace(resolvedResources[0].accessUrl);
+                    }
+                    // Tell the Resolved Resource display to show the options
+                    resolutionResultsController.showResolutionDataSet(resolvedResources);
+                }
+            }, that.getInputCompactId());
+            return false;
+        });
     };
 
     ResolutionRequestController.prototype.formSubmitListenerSetup = function () {
