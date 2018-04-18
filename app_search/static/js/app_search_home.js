@@ -80,6 +80,7 @@ var AppSearchHomePageGlue = (function () {
         that = this;
         document.getElementById(this.resolutionFormId).addEventListener("submit", function (event) {
             event.preventDefault();
+            // TODO - Change this to 'resolve' instead of redirection
             // Resolve Compact ID
             getResolvedResources(function (resolvedResources) {
                 if (resolvedResources) {
