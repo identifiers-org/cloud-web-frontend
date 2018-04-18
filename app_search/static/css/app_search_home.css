@@ -1,7 +1,7 @@
 /* Styling for the app search home page */
 /* Author: Manuel Bernal Llinares <mbdebian@gmail.com> */
 .searchResultItem {
-    margin: 25px 0px 10px 0px;
+    margin: 0px 0px 25px 0px;
 }
 
 .searchResultAccessUrl {
