@@ -123,7 +123,7 @@ var AppSearchHomePageGlue = (function () {
                     // Tell the Resolved Resource display to show the options
                     resolutionResultsController.showResolutionDataSet(resolvedResources);
                 }
-            }, that.getInputCompactId());
+            }, that.getInputCompactId(that.navBarInputTextId));
             return false;
         });
     };
