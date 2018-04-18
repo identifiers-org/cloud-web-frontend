@@ -70,6 +70,20 @@ var AppSearchHomePageGlue = (function () {
             }, that.getInputCompactId());
             return false;
         });
+        // TODO - Refactor this later
+        document.getElementById(this.navBarBtnLuckyId).addEventListener("click", function (event) {
+            event.preventDefault();
+            // Resolve Compact ID
+            getResolvedResources(function (resolvedResources) {
+                if (resolvedResources) {
+                    // Select Highest Scored Resolved Resource
+                    resolvedResource = resolver.getHighestRecommendedResolvedResource(resolvedResources);
+                    // TODO - Perfect place for metrics collection
+                    location.replace(resolvedResource.accessUrl);
+                }
+            }, that.getInputCompactId());
+            return false;
+        });
     };
 
     ResolutionRequestController.prototype.clickBtnResolveListenerSetup = function () {
