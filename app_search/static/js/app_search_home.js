@@ -117,6 +117,7 @@ var AppSearchHomePageGlue = (function () {
             // Resource DIV
             resourceDiv = document.createElement('div');
             resourceDiv.setAttribute('id', resolvedResource.id);
+            resourceDiv.setAttribute('class', "searchResultItem");
             // Resource AccessUrl
             accessUrlDiv = document.createElement('div');
             accessUrlDiv.setAttribute('id', resolvedResource.id + "_accessUrl");
