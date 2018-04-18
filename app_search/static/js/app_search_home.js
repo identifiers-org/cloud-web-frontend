@@ -48,7 +48,6 @@ var AppSearchHomePageGlue = (function () {
         this.navBarInputTextId = navBarInputTextId;
         this.navBarBtnResolveId = navBarBtnResolveId;
         this.navBarBtnLuckyId = navBarBtnLuckyId;
-        this.hasItEverBeenResolved = false;
         console.debug("Wiring the Resolution Request Controller");
         // Attach events
         this.clickBtnLuckyListenerSetup();
