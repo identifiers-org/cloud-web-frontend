@@ -57,3 +57,4 @@ def prefix_registration(request):
     # TODO - Get the registry host and port
     registry_host = 'localhost'
     registry_port = '8081'
+    return render(request, 'prefix_registration.html', {'registry_host': registry_host, 'registry_port': registry_port})
