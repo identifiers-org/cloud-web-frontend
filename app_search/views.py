@@ -51,3 +51,7 @@ def resolve_with_selector(request, selector, compact_id):
     return HttpResponseServerError("Request for Compact ID '{}' could not be completed "
                                    "due to an error selecting a suitable provider".format(compact_id))
 
+
+# Prefix Registration Page
+def prefix_registration(request):
+    pass
