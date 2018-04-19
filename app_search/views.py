@@ -54,4 +54,6 @@ def resolve_with_selector(request, selector, compact_id):
 
 # Prefix Registration Page
 def prefix_registration(request):
-    pass
+    # TODO - Get the registry host and port
+    registry_host = 'localhost'
+    registry_port = '8081'
