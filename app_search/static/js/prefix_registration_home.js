@@ -6,3 +6,6 @@
  *
  * Javascript glue for prefix registration web page
  */
+var PrefixRegistrationWebPageGlue = (function () {
+    // TODO
+});
