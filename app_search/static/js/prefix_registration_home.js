@@ -7,5 +7,6 @@
  * Javascript glue for prefix registration web page
  */
 var PrefixRegistrationWebPageGlue = (function () {
+    // This is the glue doing all the magic in the prefix registration request page.
     // TODO
 });
