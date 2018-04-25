@@ -9,3 +9,5 @@ db.sqlite3
 .env
 web_server.pid
 **/.DS_Store
+# DevOps flags
+development_env_up
