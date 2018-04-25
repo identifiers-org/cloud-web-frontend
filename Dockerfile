@@ -10,7 +10,7 @@ ENV FOLDER_WEBSITE_ROOT ${FOLDER_BASE}/${FOLDER_NAME_SITE}
 ENV DJANGO_SETTINGS_MODULE projectweb.settings.production
 ENV DJANGO_ALLOWED_HOSTS identifiers.org,cloud.identifiers.org,cloud.aws.identifiers.org,cloud.gcloud.identifiers.org
 ENV DJANGO_STATIC_ROOT ${FOLDER_WEBSITE_ROOT}/static
-ENV SITE_CNAME identifiers.org cloud.identifiers.org
+ENV SITE_CNAME identifiers.org cloud.identifiers.org cloud.aws.identifiers.org cloud.gcloud.identifiers.org
 ENV PROXY_PASS_INFORMATION unix:/tmp/webapp.socket
 ENV GUNICORN_WSGI_APPLICATION projectweb.wsgi:application
 ENV WEB_CONFIG_SERVICE_RESOLVER_HOST resolver
