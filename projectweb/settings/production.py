@@ -16,6 +16,7 @@ from .base import *
 
 DEBUG = False
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').strip().split(',')
+CORS_ORIGIN_WHITELIST = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').strip().split(',')
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 # We don't do redirect because this is designed to be deployed behing an SSL termination load balancer
