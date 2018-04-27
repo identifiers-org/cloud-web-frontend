@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponseServerEr
 from django.shortcuts import render
 from .models import HomePage as HomePageModel
 from .models import ResolutionModel
+from .models import PrefixRegistrationHomePage as PrefixRegistrationModel
 # Application imports
 import config_manager
 
@@ -54,7 +55,6 @@ def resolve_with_selector(request, selector, compact_id):
 
 # Prefix Registration Page
 def prefix_registration(request):
-    # TODO - Get the registry host and port
-    registry_host = 'localhost'
-    registry_port = '8081'
+    # Get the registry host and port
+    registry_host, registry_port = PrefixRegistrationModel.get_registry_host_and_port()
     return render(request, 'prefix_registration.html', {'registry_host': registry_host, 'registry_port': registry_port})
