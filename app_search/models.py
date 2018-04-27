@@ -19,6 +19,11 @@ class ResolutionServiceLocationFactory:
         return (os.environ.get('WEB_CONFIG_SERVICE_RESOLVER_HOST', 'localhost'),
                 os.environ.get('WEB_CONFIG_SERVICE_RESOLVER_PORT', '8080'))
 
+    @staticmethod
+    def get_registry_host_and_port():
+        return (os.environ.get('WEB_CONFIG_SERVICE_REGISTRY_HOST', 'localhost'),
+                os.environ.get('WEB_CONFIG_SERVICE_REGISTRY_PORT', '8081'))
+
 
 class ResolutionModel:
     def __init__(self):
