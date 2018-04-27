@@ -13,6 +13,12 @@ class HomePage:
         return ResolutionServiceLocationFactory.get_resolver_host_and_port()
 
 
+class PrefixRegistrationHomePage:
+    @staticmethod
+    def get_registry_host_and_port():
+        return ResolutionServiceLocationFactory.get_registry_host_and_port()
+
+
 class ResolutionServiceLocationFactory:
     @staticmethod
     def get_resolver_host_and_port():
@@ -37,7 +43,8 @@ class ResolutionModel:
         server_response = resolver.resolve(compact_id)
         resolved_resource = None
         if server_response.http_status == 200:
-            resolved_resource = resolver.get_highest_recommended_resolved_resource(server_response.payload.resolved_resources)
+            resolved_resource = resolver.get_highest_recommended_resolved_resource(
+                server_response.payload.resolved_resources)
         return server_response, resolved_resource
 
     def resolve_with_selector(self, compact_id, selector):
