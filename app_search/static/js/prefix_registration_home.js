@@ -103,7 +103,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO - Glue all the web page elements
         registryService = IdentifiersJS.getRegistry(prefixRegistrationWebServiceHost, prefixRegistrationWebServicePort);
         // Build the validation map
-        validationMap[prefixRegistrationFormItemName] = registryService.requestValidationName;
+        validationMap[prefixRegistrationFormItemName] = function(callback, payload) {registryService.requestValidationName(callback, payload);};
         validationMap[prefixRegistrationFormItemDescription] = registryService.requestValidationDescription;
         validationMap[prefixRegistrationFormItemHomePage] = registryService.requestValidationHomePage;
         validationMap[prefixRegistrationFormItemOrganization] = registryService.requestValidationOrganization;
