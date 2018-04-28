@@ -48,16 +48,10 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function formFieldValidationHandlerSuccess(formFieldId) {
         // TODO
-        return function (validationResponse) {
-            // TODO
-        };
     }
 
-    function formFieldValidationHandlerError(formFieldId) {
+    function formFieldValidationHandlerError(formFieldId, error) {
         // TODO
-        return function (validationResponse) {
-            // TODO
-        };
     }
 
     function formFieldValidationStatusReset(formFieldId) {
