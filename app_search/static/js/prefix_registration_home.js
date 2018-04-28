@@ -74,7 +74,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         invalidFeedbackNode.setAttribute('id', formFieldId + "-" + suffixInvalidFeedback);
         invalidFeedbackNode.setAttribute('class', "invalid-feedback");
         invalidFeedbackNode.innerText = errorMessage;
-        document.getElementById(formFieldId).appendChild(invalidFeedbackNode);
+        document.getElementById(formFieldId).parentNode.appendChild(invalidFeedbackNode);
     }
 
     function formFieldValidationStatusReset(formFieldId) {
@@ -85,7 +85,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         classes.delete('is-invalid');
         document.getElementById(formFieldId).setAttribute('class', Array.from(classes).join(' '));
         // Remove possible failure sibling
-        document.getElementById(formFieldId).parentNode.removeChild(document.getElementById(formFieldId + "-" + suffixInvalidFeedback));
+        var invalidFeedbackNode = document.getElementById(formFieldId + "-" + suffixInvalidFeedback);
+        if (invalidFeedbackNode !== null) {
+            document.getElementById(formFieldId).parentNode.removeChild(document.getElementById(formFieldId + "-" + suffixInvalidFeedback));
+        }
     }
 
     function validateRequester() {
