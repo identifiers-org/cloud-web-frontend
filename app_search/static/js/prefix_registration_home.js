@@ -15,4 +15,8 @@ var PrefixRegistrationWebPageGlue = (function () {
     function initPage() {
         // TODO - Glue all the web page elements
     }
+
+    return {
+        init: initPage
+    };
 })();
