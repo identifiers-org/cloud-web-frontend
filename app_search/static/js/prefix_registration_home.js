@@ -105,7 +105,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         // Build the validation map
         validationMap[prefixRegistrationFormItemName] = function(callback, payload) {registryService.requestValidationName(callback, payload);};
         validationMap[prefixRegistrationFormItemDescription] = function(callback, payload) {registryService.requestValidationDescription(callback,payload);};
-        validationMap[prefixRegistrationFormItemHomePage] = registryService.requestValidationHomePage;
+        validationMap[prefixRegistrationFormItemHomePage] = function(callback, payload) {registryService.requestValidationHomePage(callback, payload);};
         validationMap[prefixRegistrationFormItemOrganization] = registryService.requestValidationOrganization;
         validationMap[prefixRegistrationFormItemPreferredPrefix] = registryService.requestValidationPreferredPrefix;
         validationMap[prefixRegistrationFormItemResourceAccessRule] = registryService.requestValidationResourceAccessRule;
