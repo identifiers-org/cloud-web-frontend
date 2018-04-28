@@ -42,6 +42,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function formFieldValidationStatusReset(formFieldId) {
+        // TODO
+    }
+
     function validateRequester(event) {
         // TODO
     }
