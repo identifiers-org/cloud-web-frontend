@@ -67,8 +67,19 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function prefixRegistrationFormToPayload() {
-        // TODO
         var payload = new IdentifiersJS.PrefixRegistrationPayload();
+        payload.name = document.getElementById(prefixRegistrationFormItemName).value;
+        payload.description = document.getElementById(prefixRegistrationFormItemDescription).value;
+        payload.homePage = document.getElementById(prefixRegistrationFormItemHomePage).value;
+        payload.organization = document.getElementById(prefixRegistrationFormItemOrganization).value;
+        payload.preferredPrefix = document.getElementById(prefixRegistrationFormItemPreferredPrefix).value;
+        payload.resourceAccessRule = document.getElementById(prefixRegistrationFormItemResourceAccessRule).value;
+        payload.exampleIdentifier = document.getElementById(prefixRegistrationFormItemExampleIdentifier).value;
+        payload.regexPattern = document.getElementById(prefixRegistrationFormItemRegexPattern).value;
+        payload.references = document.getElementById(prefixRegistrationFormItemPublication).value.split(',');
+        payload.additionalInformation = document.getElementById(prefixRegistrationFormItemAdditionalInformation).value;
+        payload.requester.name = document.getElementById(prefixRegistrationFormItemRequesterName).value;
+        payload.requester.email = document.getElementById(prefixRegistrationFormItemRequesterEmail).value;
         return payload;
     }
 
