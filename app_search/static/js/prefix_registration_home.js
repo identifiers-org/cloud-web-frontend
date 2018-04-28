@@ -34,6 +34,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         event.preventDefault();
         var elementId = this.getAttribute('id');
         console.debug("Validation triggered for form field ID '" + elementId + "'");
+        validateFormField(elementId);
         return false;
     }
 
