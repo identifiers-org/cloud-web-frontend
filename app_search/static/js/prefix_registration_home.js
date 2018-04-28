@@ -54,6 +54,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formFieldValidationHandlerSuccess(formFieldId) {
+        console.debug("Successful validation of form field ID '" + formFieldId + "'");
         // TODO
     }
 
