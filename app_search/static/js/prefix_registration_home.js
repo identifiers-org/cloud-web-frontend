@@ -53,8 +53,11 @@ var PrefixRegistrationWebPageGlue = (function () {
         };
     }
 
-    function formFieldValidationHandlerError(formFieldId, error) {
+    function formFieldValidationHandlerError(formFieldId) {
         // TODO
+        return function (validationResponse) {
+            // TODO
+        };
     }
 
     function formFieldValidationStatusReset(formFieldId) {
