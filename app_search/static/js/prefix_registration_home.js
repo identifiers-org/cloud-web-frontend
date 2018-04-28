@@ -66,6 +66,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function prefixRegistrationFormToPayload() {
+        // TODO
+    }
+
     function attachValidationListeners() {
         for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
             console.debug("Attaching validation listener to form field ID '" + formFieldId + "'");
