@@ -11,6 +11,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     // Activate validation of data from form fields upon losing focus
     var validateFlag = false;
     // Prefix Registration form items
+    var prefixRegistrationFormId = "prefix_registration_form_id";
     var prefixRegistrationFormItemName = "prefixRegistrationName";
     var prefixRegistrationFormItemDescription = "prefixRegistrationDescription";
     var prefixRegistrationFormItemHomePage = "prefixRegistrationHomePage";
