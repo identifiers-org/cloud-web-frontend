@@ -64,6 +64,10 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function addValidationListeners() {
         // TODO
+        for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
+            console.debug("Attaching validation listener to form field ID '" + formFieldId + "'");
+            document.getElementById(formFieldId).addEventListener('onfocusout', validateFormFieldTriggerListener);
+        }
     }
 
     function initPage() {
