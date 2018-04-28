@@ -53,7 +53,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
-    function validateRequester(event) {
+    function validateRequester() {
         // TODO
     }
 
