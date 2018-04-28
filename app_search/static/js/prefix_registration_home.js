@@ -70,11 +70,11 @@ var PrefixRegistrationWebPageGlue = (function () {
         var classes = new Set(document.getElementById(formFieldId).getAttribute('class').split(' '));
         classes.add('is-invalid');
         document.getElementById(formFieldId).setAttribute('class', Array.from(classes).join(' '));
-        var invalidFeedback = document.createElement('div');
-        invalidFeedback.setAttribute('id', formFieldId + "-" + suffixInvalidFeedback);
-        invalidFeedback.setAttribute('class', "invalid-feedback");
-        invalidFeedback.innerText = errorMessage;
-        document.getElementById(formFieldId).appendChild(invalidFeedback);
+        var invalidFeedbackNode = document.createElement('div');
+        invalidFeedbackNode.setAttribute('id', formFieldId + "-" + suffixInvalidFeedback);
+        invalidFeedbackNode.setAttribute('class', "invalid-feedback");
+        invalidFeedbackNode.innerText = errorMessage;
+        document.getElementById(formFieldId).appendChild(invalidFeedbackNode);
     }
 
     function formFieldValidationStatusReset(formFieldId) {
