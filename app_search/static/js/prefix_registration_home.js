@@ -68,6 +68,8 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function prefixRegistrationFormToPayload() {
         // TODO
+        var payload = new IdentifiersJS.PrefixRegistrationPayload();
+        return payload;
     }
 
     function attachValidationListeners() {
