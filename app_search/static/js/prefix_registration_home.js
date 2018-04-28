@@ -13,6 +13,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     // Prefix Registration form items
     var prefixRegistrationFormItemName = "prefixRegistrationName";
     var prefixRegistrationFormItemDescription = "prefixRegistrationDescription";
+    var prefixRegistrationFormItemHomePage = "prefixRegistrationHomePage";
 
     function initPage() {
         // TODO - Glue all the web page elements
