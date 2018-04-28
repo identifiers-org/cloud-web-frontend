@@ -62,8 +62,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
-    function addValidationListeners() {
-        // TODO
+    function attachValidationListeners() {
         for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
             console.debug("Attaching validation listener to form field ID '" + formFieldId + "'");
             document.getElementById(formFieldId).addEventListener('onfocusout', validateFormFieldTriggerListener);
@@ -86,7 +85,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         validationMap[prefixRegistrationFormItemAdditionalInformation] = registryService.requestValidationAdditionalInformation;
         validationMap[prefixRegistrationFormItemRequesterName] = validateRequester;
         validationMap[prefixRegistrationFormItemRequesterEmail] = validateRequester;
-        // TODO - Attach the validation function to each form field
+        // Attach the validation function to each form field
+        attachValidationListeners();
     }
 
     return {
