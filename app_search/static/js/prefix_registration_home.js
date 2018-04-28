@@ -84,7 +84,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         classes.delete('is-valid');
         classes.delete('is-invalid');
         document.getElementById(formFieldId).setAttribute('class', Array.from(classes).join(' '));
-        // TODO - Remove possible failure sibling
+        // Remove possible failure sibling
+        document.getElementById(formFieldId).parentNode.removeChild(document.getElementById(formFieldId + "-" + suffixInvalidFeedback));
     }
 
     function validateRequester() {
