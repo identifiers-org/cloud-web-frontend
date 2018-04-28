@@ -23,9 +23,11 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemAdditionalInformation = "prefixRegistrationAdditionalInformation";
     var prefixRegistrationFormItemRequesterName = "prefixRegistrationRequesterName";
     var prefixRegistrationFormItemRequesterEmail = "prefixRegistrationRequesterEmail";
-
+    // Registry Service
+    var registryService;
     function initPage() {
         // TODO - Glue all the web page elements
+        registryService = IdentifiersJS.getRegistry(prefixRegistrationWebServiceHost, prefixRegistrationWebServicePort);
     }
 
     return {
