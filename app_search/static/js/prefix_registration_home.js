@@ -18,6 +18,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemPreferredPrefix = "prefixRegistrationPreferredPrefix";
     var prefixRegistrationFormItemResourceAccessRule = "prefixRegistrationResourceAccessRule";
     var prefixRegistrationFormItemExampleIdentifier = "prefixRegistrationExampleIdentifier";
+    var prefixRegistrationFormItemRegexPattern = "prefixRegistrationRegexPattern";
 
     function initPage() {
         // TODO - Glue all the web page elements
