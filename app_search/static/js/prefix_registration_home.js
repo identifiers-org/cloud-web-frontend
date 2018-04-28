@@ -70,7 +70,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formFieldValidationStatusReset(formFieldId) {
-        // TODO
+        console.debug("Reset styling for form field ID '" + formFieldId + "'");
     }
 
     function validateRequester() {
