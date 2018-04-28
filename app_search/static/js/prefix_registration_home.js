@@ -26,6 +26,8 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemRequesterEmail = "prefixRegistrationRequesterEmail";
     // Registry Service
     var registryService;
+    // Validation map
+    var validationMap = {};
 
     // Validation function
     function validateFormField(event) {
