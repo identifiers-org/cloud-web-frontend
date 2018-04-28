@@ -11,4 +11,4 @@ var PrefixRegistrationWebPageGlue = (function () {
     // TODO
     // Activate validation of data from form fields upon losing focus
     var validateFlag = false;
-});
+})();
