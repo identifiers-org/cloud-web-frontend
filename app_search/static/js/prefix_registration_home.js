@@ -34,6 +34,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function validateRequester(event) {
+        // TODO
+    }
+
     function validateAllFields() {
         // TODO
     }
@@ -52,8 +56,9 @@ var PrefixRegistrationWebPageGlue = (function () {
         validationMap[prefixRegistrationFormItemRegexPattern] = registryService.requestValidationRegexPattern;
         validationMap[prefixRegistrationFormItemPublication] = registryService.requestValidationReferences;
         validationMap[prefixRegistrationFormItemAdditionalInformation] = registryService.requestValidationAdditionalInformation;
-        validationMap[prefixRegistrationFormItemRequesterName] = registryService.requestValidationRequester;
-        validationMap[prefixRegistrationFormItemRequesterEmail] = registryService.requestValidationRequester;
+        validationMap[prefixRegistrationFormItemRequesterName] = validateRequester;
+        validationMap[prefixRegistrationFormItemRequesterEmail] = validateRequester;
+        // TODO - Attach the validation function to each form field
     }
 
     return {
