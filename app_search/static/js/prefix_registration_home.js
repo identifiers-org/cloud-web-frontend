@@ -71,6 +71,8 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function formFieldValidationStatusReset(formFieldId) {
         console.debug("Reset styling for form field ID '" + formFieldId + "'");
+        // TODO - Reset style class
+        // TODO - Remove possible failure sibling
     }
 
     function validateRequester() {
