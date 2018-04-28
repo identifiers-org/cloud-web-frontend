@@ -40,7 +40,9 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function validateFormField(formFieldId) {
         if (validateFlag) {
-            // TODO
+            validationMap[formFieldId](function processResponse(validationResponse) {
+                // TODO
+            }, prefixRegistrationFormToPayload());
         } else {
             console.warn("Validation is DISABLED");
         }
