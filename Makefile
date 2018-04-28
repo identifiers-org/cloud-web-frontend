@@ -33,7 +33,7 @@ set_next_development_version:
 deploy: clean container_production_push
 	@echo "<===|DEVOPS|===> [DEPLOY] Deploying service container version ${tag_version}"
 
-development_env_up:
+development_env_up: tmp
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
 	@docker-compose -f $(docker_compose_development_file) up -d
 	@# TODO Clean this way of referencing the target name in future iterations
@@ -95,7 +95,7 @@ chromedriver: tmp bin/selenium
 # Folders
 tmp:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folder"
-	@mkdir tmp
+	@mkdir -p tmp/fakesmtp
 
 bin:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating bin folder"
