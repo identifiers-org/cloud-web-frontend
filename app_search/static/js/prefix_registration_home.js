@@ -22,6 +22,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemPublication = "prefixRegistrationPublication";
     var prefixRegistrationFormItemAdditionalInformation = "prefixRegistrationAdditionalInformation";
     var prefixRegistrationFormItemRequesterName = "prefixRegistrationRequesterName";
+    var prefixRegistrationFormItemRequesterEmail = "prefixRegistrationRequesterEmail";
 
     function initPage() {
         // TODO - Glue all the web page elements
