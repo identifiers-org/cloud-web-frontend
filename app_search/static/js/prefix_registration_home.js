@@ -55,10 +55,9 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function formFieldValidationHandlerSuccess(formFieldId) {
         console.debug("Successful validation of form field ID '" + formFieldId + "'");
-        var classes = set(document.getElementById(formFieldId).getAttribute('class').split(' '));
+        var classes = new Set(document.getElementById(formFieldId).getAttribute('class').split(' '));
         classes.add('is-valid');
-        document.getElementById(formFieldId).setAttribute('class', classes.join(' '));
-        // TODO
+        document.getElementById(formFieldId).setAttribute('class', Array.from(classes).join(' '));
     }
 
     function formFieldValidationHandlerError(formFieldId, errorMessage) {
