@@ -9,7 +9,7 @@
 var PrefixRegistrationWebPageGlue = (function () {
     // This is the glue doing all the magic in the prefix registration request page.
     // Activate validation of data from form fields upon losing focus
-    var validateFlag = false;
+    var validateFlag = true;
     // Prefix Registration form items
     var prefixRegistrationFormId = "prefix_registration_form_id";
     var prefixRegistrationFormItemName = "prefixRegistrationName";
@@ -30,8 +30,13 @@ var PrefixRegistrationWebPageGlue = (function () {
     var validationMap = {};
 
     // Validation function
-    function validateFormField(event) {
-        // TODO
+    function validateFormFieldTriggerListener(event) {
+        event.preventDefault();
+        if (validateFlag) {
+            console.debug("Validation triggered for form field ID '" +  + "'");
+            // TODO
+        }
+        return false;
     }
 
     function formFieldValidationHandlerSuccess(formFieldId) {
