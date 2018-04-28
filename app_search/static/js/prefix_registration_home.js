@@ -8,9 +8,10 @@
  */
 var PrefixRegistrationWebPageGlue = (function () {
     // This is the glue doing all the magic in the prefix registration request page.
-    // TODO
     // Activate validation of data from form fields upon losing focus
     var validateFlag = false;
+    // Prefix Registration form items
+    var prefixRegistrationFormItemName = "prefixRegistrationName";
 
     function initPage() {
         // TODO - Glue all the web page elements
