@@ -31,6 +31,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function validateAllFields() {
+        // TODO
+    }
+
     function initPage() {
         // TODO - Glue all the web page elements
         registryService = IdentifiersJS.getRegistry(prefixRegistrationWebServiceHost, prefixRegistrationWebServicePort);
