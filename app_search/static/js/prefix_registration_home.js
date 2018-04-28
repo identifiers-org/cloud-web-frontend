@@ -20,3 +20,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         init: initPage
     };
 })();
+
+// Set up everything.
+window.onload = function () {
+    PrefixRegistrationWebPageGlue.init();
+};
