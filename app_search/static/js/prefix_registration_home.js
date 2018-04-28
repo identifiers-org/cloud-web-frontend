@@ -11,4 +11,8 @@ var PrefixRegistrationWebPageGlue = (function () {
     // TODO
     // Activate validation of data from form fields upon losing focus
     var validateFlag = false;
+
+    function initPage() {
+        // TODO - Glue all the web page elements
+    }
 })();
