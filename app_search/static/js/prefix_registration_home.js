@@ -42,6 +42,11 @@ var PrefixRegistrationWebPageGlue = (function () {
         if (validateFlag) {
             validationMap[formFieldId](function processResponse(validationResponse) {
                 // TODO
+                if (validationResponse.httpStatus !== 200) {
+                    formFieldValidationHandlerError(formFieldId, validationResponse.errorMessage);
+                } else {
+                    formFieldValidationHandlerSuccess(formFieldId);
+                }
             }, prefixRegistrationFormToPayload());
         } else {
             console.warn("Validation is DISABLED");
