@@ -58,8 +58,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
-    function formFieldValidationHandlerError(formFieldId, error) {
-        console.error("FAILED to validate form field ID '" + formFieldId + "', cause --- '" + error + "'");
+    function formFieldValidationHandlerError(formFieldId, errorMessage) {
+        console.error("FAILED to validate form field ID '" + formFieldId + "', cause --- '" + errorMessage + "'");
         // TODO
     }
 
