@@ -32,10 +32,8 @@ var PrefixRegistrationWebPageGlue = (function () {
     // Validation function
     function validateFormFieldTriggerListener(event) {
         event.preventDefault();
-        if (validateFlag) {
-            console.debug("Validation triggered for form field ID '" +  + "'");
-            // TODO
-        }
+        console.debug("Validation triggered for form field ID '" + +"'");
+        // TODO
         return false;
     }
 
