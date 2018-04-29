@@ -54,91 +54,108 @@
     <div class="row justify-content-center align-items-center">
         <div id="prefix_registration_form_body">
             <form id="prefix_registration_form_id">
-                <div class="form-group">
-                    <label for="prefixRegistrationName">Name</label>
-                    <input class="form-control" id="prefixRegistrationName"
-                           placeholder="Name of the resource">
-                    <small id="nameHelp" class="form-text text-muted">Enter the name of the resource, Example: Protein Data Bank
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationDescription">Description</label>
-                    <input class="form-control" id="prefixRegistrationDescription"
-                           placeholder="One or more sentences describing the resource">
-                    <small id="prefixRegistrationDescriptionHelp" class="form-text text-muted">Example: The Protein Data Bank is the single worldwide archive of structural data of biological macromolecules.
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationHomePage">Home Page</label>
-                    <input class="form-control" id="prefixRegistrationHomePage"
-                           placeholder="URL to the resource Home Page">
-                    <small id="prefixRegistrationHomePageHelp" class="form-text text-muted">A URL describing the resource. Example: http://www.pdbe.org/
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationOrganization">Organization</label>
-                    <input class="form-control" id="prefixRegistrationOrganization"
-                           placeholder="Name of the providing organization">
-                    <small id="prefixRegistrationOrganizationHelp" class="form-text text-muted">Example: European Bioinformatics Institute, Hinxton, Cambridge, UK
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationPreferredPrefix">Preferred Prefix</label>
-                    <input class="form-control" id="prefixRegistrationPreferredPrefix"
-                           placeholder="Preferred Prefix">
-                    <small id="prefixRegistrationPreferredPrefixHelp" class="form-text text-muted">Character string meant to precede the colon in resolved identifiers. No spaces or punctuation, only letters, numbers and underscores, and it must start with a letter. Example: pdb
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationResourceAccessRule">Resource Access Rule</label>
-                    <input class="form-control" id="prefixRegistrationResourceAccessRule"
-                           placeholder="Type in your resource access rule here">
-                    <small id="prefixRegistrationResourceAccessRuleHelp" class="form-text text-muted">A URL-like string specifying a rule for resolving this class of identifier. This rule should contain the substring "{$id}", which is a placeholder for the local identifier. Example: http://www.ebi.ac.uk/pdbe/entry/pdb/{$id}
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationExampleIdentifier">Example Identifier</label>
-                    <input class="form-control" id="prefixRegistrationExampleIdentifier"
-                           placeholder="Type in an example identifier">
-                    <small id="prefixRegistrationExampleIdentifierHelp" class="form-text text-muted">Example: 2gc4
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationRegexPattern">Regex Pattern</label>
-                    <input class="form-control" id="prefixRegistrationRegexPattern"
-                           placeholder="Type in your regular expression here">
-                    <small id="prefixRegistrationRegexPatternHelp" class="form-text text-muted">A regular expression specifying the form of string expected for this identifier. Example: ^[0-9][A-Za-z0-9]{3}$
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationPublication">References</label>
-                    <input class="form-control" id="prefixRegistrationPublication"
-                           placeholder="Enter any published work">
-                    <small id="prefixRegistrationPublicationHelp" class="form-text text-muted">References (URLs, citations), if any, to published work describing the resource
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationAdditionalInformation">Additional Information</label>
-                    <input class="form-control" id="prefixRegistrationAdditionalInformation"
-                           placeholder="Enter any additional information">
-                    <small id="prefixRegistrationAdditionalInformationHelp" class="form-text text-muted">Anything else you wish to tell or ask us
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationRequesterName">Requester Name</label>
-                    <input class="form-control" id="prefixRegistrationRequesterName"
-                           placeholder="Name of the requester">
-                    <small id="prefixRegistrationRequesterNameHelp" class="form-text text-muted">Enter here the name of the person requesting this registration
-                    </small>
-                </div>
-                <div class="form-group">
-                    <label for="prefixRegistrationRequesterEmail">Requester E-mail</label>
-                    <input class="form-control" id="prefixRegistrationRequesterEmail" type="email" aria-describedby="emailHelp"
-                           placeholder="E-mail address">
-                    <small id="prefixRegistrationRequesterEmailHelp" class="form-text text-muted">Enter here the e-mail address of the person requesting this registration
-                    </small>
-                </div>
-                <button id="prefix_registration_btn_submit_id" type="submit" class="btn btn-primary">Submit</button>
+                <fieldset id="prefix_registration_form_fieldset">
+                    <div class="form-group">
+                        <label for="prefixRegistrationName">Name</label>
+                        <input class="form-control" id="prefixRegistrationName"
+                               placeholder="Name of the resource">
+                        <small id="nameHelp" class="form-text text-muted">Enter the name of the resource, Example:
+                            Protein Data Bank
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationDescription">Description</label>
+                        <input class="form-control" id="prefixRegistrationDescription"
+                               placeholder="One or more sentences describing the resource">
+                        <small id="prefixRegistrationDescriptionHelp" class="form-text text-muted">Example: The Protein
+                            Data Bank is the single worldwide archive of structural data of biological macromolecules.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationHomePage">Home Page</label>
+                        <input class="form-control" id="prefixRegistrationHomePage"
+                               placeholder="URL to the resource Home Page">
+                        <small id="prefixRegistrationHomePageHelp" class="form-text text-muted">A URL describing the
+                            resource. Example: http://www.pdbe.org/
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationOrganization">Organization</label>
+                        <input class="form-control" id="prefixRegistrationOrganization"
+                               placeholder="Name of the providing organization">
+                        <small id="prefixRegistrationOrganizationHelp" class="form-text text-muted">Example: European
+                            Bioinformatics Institute, Hinxton, Cambridge, UK
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationPreferredPrefix">Preferred Prefix</label>
+                        <input class="form-control" id="prefixRegistrationPreferredPrefix"
+                               placeholder="Preferred Prefix">
+                        <small id="prefixRegistrationPreferredPrefixHelp" class="form-text text-muted">Character string
+                            meant to precede the colon in resolved identifiers. No spaces or punctuation, only letters,
+                            numbers and underscores, and it must start with a letter. Example: pdb
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationResourceAccessRule">Resource Access Rule</label>
+                        <input class="form-control" id="prefixRegistrationResourceAccessRule"
+                               placeholder="Type in your resource access rule here">
+                        <small id="prefixRegistrationResourceAccessRuleHelp" class="form-text text-muted">A URL-like
+                            string specifying a rule for resolving this class of identifier. This rule should contain
+                            the substring "{$id}", which is a placeholder for the local identifier. Example:
+                            http://www.ebi.ac.uk/pdbe/entry/pdb/{$id}
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationExampleIdentifier">Example Identifier</label>
+                        <input class="form-control" id="prefixRegistrationExampleIdentifier"
+                               placeholder="Type in an example identifier">
+                        <small id="prefixRegistrationExampleIdentifierHelp" class="form-text text-muted">Example: 2gc4
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationRegexPattern">Regex Pattern</label>
+                        <input class="form-control" id="prefixRegistrationRegexPattern"
+                               placeholder="Type in your regular expression here">
+                        <small id="prefixRegistrationRegexPatternHelp" class="form-text text-muted">A regular expression
+                            specifying the form of string expected for this identifier. Example: ^[0-9][A-Za-z0-9]{3}$
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationPublication">References</label>
+                        <input class="form-control" id="prefixRegistrationPublication"
+                               placeholder="Enter any published work">
+                        <small id="prefixRegistrationPublicationHelp" class="form-text text-muted">References (URLs,
+                            citations), if any, to published work describing the resource
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationAdditionalInformation">Additional Information</label>
+                        <input class="form-control" id="prefixRegistrationAdditionalInformation"
+                               placeholder="Enter any additional information">
+                        <small id="prefixRegistrationAdditionalInformationHelp" class="form-text text-muted">Anything
+                            else you wish to tell or ask us
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationRequesterName">Requester Name</label>
+                        <input class="form-control" id="prefixRegistrationRequesterName"
+                               placeholder="Name of the requester">
+                        <small id="prefixRegistrationRequesterNameHelp" class="form-text text-muted">Enter here the name
+                            of the person requesting this registration
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefixRegistrationRequesterEmail">Requester E-mail</label>
+                        <input class="form-control" id="prefixRegistrationRequesterEmail" type="email"
+                               aria-describedby="emailHelp"
+                               placeholder="E-mail address">
+                        <small id="prefixRegistrationRequesterEmailHelp" class="form-text text-muted">Enter here the
+                            e-mail address of the person requesting this registration
+                        </small>
+                    </div>
+                    <button id="prefix_registration_btn_submit_id" type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
             </form>
         </div>
     </div>
