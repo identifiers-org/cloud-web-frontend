@@ -10,6 +10,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     // This is the glue doing all the magic in the prefix registration request page.
     // Activate validation of data from form fields upon losing focus
     var validateFlag = true;
+    var allFormFieldsAreValid = false;
     // Suffixes
     var suffixValidFeedback = 'valid-feedback';
     var suffixInvalidFeedback = 'invalid-feedback';
