@@ -173,6 +173,8 @@ var PrefixRegistrationWebPageGlue = (function () {
             if (allFormFieldsAreValid) {
                 // TODO
             } else {
+                enableAllFormItems();
+                // TODO
                 console.error("Submission FAILED!, the user will need to review the form");
             }
             return false;
