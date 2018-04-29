@@ -119,6 +119,14 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function validateAllFields() {
+        for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
+            console.debug("Validating form field '" + formFieldId + "'");
+            if ((formFieldId !== prefixRegistrationFormItemRequesterName) && (formFieldId !== prefixRegistrationFormItemRequesterEmail)) {
+                document.getElementById(formFieldId).addEventListener('focusout', validateFormField(formFieldId));
+            }
+        }
+        console.debug("Validating requester");
+        validateRequester();
         // TODO
     }
 
