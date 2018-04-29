@@ -197,7 +197,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function enableAllFormItems() {
-        // TODO
+        document.getElementById(prefixRegistrationFormFieldsetId).removeAttribute('disabled');
     }
 
     function initPage() {
