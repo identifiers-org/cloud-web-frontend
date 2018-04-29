@@ -16,6 +16,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     var suffixInvalidFeedback = 'invalid-feedback';
     // Prefix Registration form items
     var prefixRegistrationFormId = "prefix_registration_form_id";
+    var prefixRegistrationFormFieldsetId = "prefix_registration_form_fieldset";
     var prefixRegistrationFormItemName = "prefixRegistrationName";
     var prefixRegistrationFormItemDescription = "prefixRegistrationDescription";
     var prefixRegistrationFormItemHomePage = "prefixRegistrationHomePage";
