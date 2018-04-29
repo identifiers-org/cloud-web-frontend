@@ -172,6 +172,7 @@ var PrefixRegistrationWebPageGlue = (function () {
             }
             return false;
         };
+        document.getElementById(prefixRegistrationFormId).addEventListener('submit', submissionListener);
     }
 
     function formSubmissionHandlerSuccess() {
