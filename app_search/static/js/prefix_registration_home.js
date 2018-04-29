@@ -28,6 +28,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemAdditionalInformation = "prefixRegistrationAdditionalInformation";
     var prefixRegistrationFormItemRequesterName = "prefixRegistrationRequesterName";
     var prefixRegistrationFormItemRequesterEmail = "prefixRegistrationRequesterEmail";
+    var prefixRegistrationFormSubmitButtonId = "prefix_registration_btn_submit_id";
     // Registry Service
     var registryService;
     // Validation map
@@ -173,6 +174,7 @@ var PrefixRegistrationWebPageGlue = (function () {
             return false;
         };
         document.getElementById(prefixRegistrationFormId).addEventListener('submit', submissionListener);
+        document.getElementById(prefixRegistrationFormSubmitButtonId).addEventListener('click', submissionListener);
     }
 
     function formSubmissionHandlerSuccess() {
