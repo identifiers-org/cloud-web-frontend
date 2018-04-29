@@ -168,6 +168,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         var submissionListener = function (event) {
             console.info("Submission of prefix registration request.")
             event.preventDefault();
+            disableAllFormItems();
             validateAllFields();
             if (allFormFieldsAreValid) {
                 // TODO
