@@ -29,6 +29,8 @@ var PrefixRegistrationWebPageGlue = (function () {
     var prefixRegistrationFormItemRequesterName = "prefixRegistrationRequesterName";
     var prefixRegistrationFormItemRequesterEmail = "prefixRegistrationRequesterEmail";
     var prefixRegistrationFormSubmitButtonId = "prefix_registration_btn_submit_id";
+    // Reporting Area ID
+    var reportAreaId = "report_area";
     // Registry Service
     var registryService;
     // Validation map
