@@ -55,7 +55,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         if (validateFlag) {
             registryService.requestValidationRequester(function processResponse(validationResponse) {
                 if (validationResponse.httpStatus !== 200) {
-                    formFieldValidationHandlerError(prefixRegistrationFormItemRequesterName, validationResponse.errorMessage);
+                    // NOTE - Quick hack, as errors from here are always related to the e-mail address
+                    //formFieldValidationHandlerError(prefixRegistrationFormItemRequesterName, validationResponse.errorMessage);
                     formFieldValidationHandlerError(prefixRegistrationFormItemRequesterEmail, validationResponse.errorMessage);
                 } else {
                     formFieldValidationHandlerSuccess(prefixRegistrationFormItemRequesterName);
