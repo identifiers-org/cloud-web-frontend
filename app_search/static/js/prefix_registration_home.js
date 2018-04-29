@@ -91,7 +91,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         }
     }
 
-    function validateRequester() {
+    function validateRequester(formFieldId) {
         // TODO
     }
 
@@ -141,8 +141,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         validationMap[prefixRegistrationFormItemRegexPattern] = function(callback, payload) {registryService.requestValidationRegexPattern(callback, payload);};
         validationMap[prefixRegistrationFormItemPublication] = function(callback, payload) {registryService.requestValidationReferences(callback, payload);};
         validationMap[prefixRegistrationFormItemAdditionalInformation] = function(callback, payload) {registryService.requestValidationAdditionalInformation(callback, payload);};
-        validationMap[prefixRegistrationFormItemRequesterName] = validateRequester;
-        validationMap[prefixRegistrationFormItemRequesterEmail] = validateRequester;
+        validationMap[prefixRegistrationFormItemRequesterName] = function(callback, payload) {registryService.requestValidationRequester(callback, payload);};
+        validationMap[prefixRegistrationFormItemRequesterEmail] = function(callback, payload) {registryService.requestValidationRequester(callback, payload);};
         // Attach the validation function to each form field
         attachValidationListeners();
     }
