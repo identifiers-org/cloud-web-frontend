@@ -121,6 +121,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function validateAllFields() {
+        allFormFieldsAreValid = true;
         for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
             console.debug("Validating form field '" + formFieldId + "'");
             if ((formFieldId !== prefixRegistrationFormItemRequesterName) && (formFieldId !== prefixRegistrationFormItemRequesterEmail)) {
@@ -129,7 +130,6 @@ var PrefixRegistrationWebPageGlue = (function () {
         }
         console.debug("Validating requester");
         validateRequester();
-        // TODO
     }
 
     function prefixRegistrationFormToPayload() {
