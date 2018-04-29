@@ -161,7 +161,17 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function attachPrefixRegistrationSubmissionListener() {
-        // TODO
+        var submissionListener = function (event) {
+            console.info("Submission of prefix registration request.")
+            event.preventDefault();
+            validateAllFields();
+            if (allFormFieldsAreValid) {
+                // TODO
+            } else {
+                console.error("Submission FAILED!, the user will need to review the form");
+            }
+            return false;
+        };
     }
 
     function initPage() {
