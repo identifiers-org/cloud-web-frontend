@@ -91,10 +91,6 @@ var PrefixRegistrationWebPageGlue = (function () {
         }
     }
 
-    function validateRequester(formFieldId) {
-        // TODO
-    }
-
     function validateAllFields() {
         // TODO
     }
