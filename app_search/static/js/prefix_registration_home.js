@@ -46,9 +46,13 @@ var PrefixRegistrationWebPageGlue = (function () {
         if ((document.getElementById(prefixRegistrationFormItemRequesterName).value !== "") && (document.getElementById(prefixRegistrationFormItemRequesterEmail).value !== "")) {
             var elementId = this.getAttribute('id');
             console.debug("Validation triggered for form field ID '" + elementId + "'");
-            validateFormField(elementId);
+            validateRequester();
         }
         return false;
+    }
+
+    function validateRequester() {
+        // TODO
     }
 
     function validateFormField(formFieldId) {
