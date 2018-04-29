@@ -199,6 +199,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function reportAreaReset() {
+        // TODO
+    }
+
     function disableAllFormItems() {
         document.getElementById(prefixRegistrationFormFieldsetId).setAttribute('disabled', true);
     }
