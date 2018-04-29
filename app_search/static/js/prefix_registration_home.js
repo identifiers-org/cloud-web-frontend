@@ -41,6 +41,16 @@ var PrefixRegistrationWebPageGlue = (function () {
         return false;
     }
 
+    function validateFormFieldRequesterListener(event) {
+        event.preventDefault();
+        if ((document.getElementById(prefixRegistrationFormItemRequesterName).value !== "") && (document.getElementById(prefixRegistrationFormItemRequesterEmail).value !== "")) {
+            var elementId = this.getAttribute('id');
+            console.debug("Validation triggered for form field ID '" + elementId + "'");
+            validateFormField(elementId);
+        }
+        return false;
+    }
+
     function validateFormField(formFieldId) {
         if (validateFlag) {
             validationMap[formFieldId](function processResponse(validationResponse) {
@@ -127,18 +137,42 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO - Glue all the web page elements
         registryService = IdentifiersJS.getRegistry(prefixRegistrationWebServiceHost, prefixRegistrationWebServicePort);
         // Build the validation map
-        validationMap[prefixRegistrationFormItemName] = function(callback, payload) {registryService.requestValidationName(callback, payload);};
-        validationMap[prefixRegistrationFormItemDescription] = function(callback, payload) {registryService.requestValidationDescription(callback,payload);};
-        validationMap[prefixRegistrationFormItemHomePage] = function(callback, payload) {registryService.requestValidationHomePage(callback, payload);};
-        validationMap[prefixRegistrationFormItemOrganization] = function(callback, payload) {registryService.requestValidationOrganization(callback, payload);};
-        validationMap[prefixRegistrationFormItemPreferredPrefix] = function(callback, payload) {registryService.requestValidationPreferredPrefix(callback, payload);};
-        validationMap[prefixRegistrationFormItemResourceAccessRule] = function(callback, payload) {registryService.requestValidationResourceAccessRule(callback, payload);};
-        validationMap[prefixRegistrationFormItemExampleIdentifier] = function(callback, payload) {registryService.requestValidationExampleIdentifier(callback, payload);};
-        validationMap[prefixRegistrationFormItemRegexPattern] = function(callback, payload) {registryService.requestValidationRegexPattern(callback, payload);};
-        validationMap[prefixRegistrationFormItemPublication] = function(callback, payload) {registryService.requestValidationReferences(callback, payload);};
-        validationMap[prefixRegistrationFormItemAdditionalInformation] = function(callback, payload) {registryService.requestValidationAdditionalInformation(callback, payload);};
-        validationMap[prefixRegistrationFormItemRequesterName] = function(callback, payload) {registryService.requestValidationRequester(callback, payload);};
-        validationMap[prefixRegistrationFormItemRequesterEmail] = function(callback, payload) {registryService.requestValidationRequester(callback, payload);};
+        validationMap[prefixRegistrationFormItemName] = function (callback, payload) {
+            registryService.requestValidationName(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemDescription] = function (callback, payload) {
+            registryService.requestValidationDescription(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemHomePage] = function (callback, payload) {
+            registryService.requestValidationHomePage(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemOrganization] = function (callback, payload) {
+            registryService.requestValidationOrganization(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemPreferredPrefix] = function (callback, payload) {
+            registryService.requestValidationPreferredPrefix(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemResourceAccessRule] = function (callback, payload) {
+            registryService.requestValidationResourceAccessRule(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemExampleIdentifier] = function (callback, payload) {
+            registryService.requestValidationExampleIdentifier(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemRegexPattern] = function (callback, payload) {
+            registryService.requestValidationRegexPattern(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemPublication] = function (callback, payload) {
+            registryService.requestValidationReferences(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemAdditionalInformation] = function (callback, payload) {
+            registryService.requestValidationAdditionalInformation(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemRequesterName] = function (callback, payload) {
+            registryService.requestValidationRequester(callback, payload);
+        };
+        validationMap[prefixRegistrationFormItemRequesterEmail] = function (callback, payload) {
+            registryService.requestValidationRequester(callback, payload);
+        };
         // Attach the validation function to each form field
         attachValidationListeners();
     }
