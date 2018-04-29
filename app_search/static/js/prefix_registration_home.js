@@ -172,7 +172,14 @@ var PrefixRegistrationWebPageGlue = (function () {
             disableAllFormItems();
             validateAllFields();
             if (allFormFieldsAreValid) {
-                // TODO
+                registryService.requestPrefixRegistration(function processResponse(prefixRegistrationResponse) {
+                if (prefixRegistrationResponse.httpStatus !== 200) {
+                    formSubmissionHandlerSuccess(prefixRegistrationResponse);
+                } else {
+                    formSubmissionHandlerError(prefixRegistrationResponse);
+                    enableAllFormItems();
+                }
+            }, prefixRegistrationFormToPayload());
             } else {
                 enableAllFormItems();
                 // TODO
@@ -184,11 +191,11 @@ var PrefixRegistrationWebPageGlue = (function () {
         document.getElementById(prefixRegistrationFormSubmitButtonId).addEventListener('click', submissionListener);
     }
 
-    function formSubmissionHandlerSuccess() {
+    function formSubmissionHandlerSuccess(prefixRegistrationResponse) {
         // TODO
     }
 
-    function formSubmissionHandlerError() {
+    function formSubmissionHandlerError(prefixRegistrationResponse) {
         // TODO
     }
 
