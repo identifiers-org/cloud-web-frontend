@@ -52,7 +52,19 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function validateRequester() {
-        // TODO
+        if (validateFlag) {
+            registryService.requestValidationRequester(function processResponse(validationResponse) {
+                if (validationResponse.httpStatus !== 200) {
+                    formFieldValidationHandlerError(prefixRegistrationFormItemRequesterName, validationResponse.errorMessage);
+                    formFieldValidationHandlerError(prefixRegistrationFormItemRequesterEmail, validationResponse.errorMessage);
+                } else {
+                    formFieldValidationHandlerSuccess(prefixRegistrationFormItemRequesterName);
+                    formFieldValidationHandlerSuccess(prefixRegistrationFormItemRequesterEmail);
+                }
+            }, prefixRegistrationFormToPayload());
+        } else {
+            console.warn("Validation is DISABLED");
+        }
     }
 
     function validateFormField(formFieldId) {
