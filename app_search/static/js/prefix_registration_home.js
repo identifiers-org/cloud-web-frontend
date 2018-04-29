@@ -103,6 +103,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         invalidFeedbackNode.setAttribute('class', "invalid-feedback");
         invalidFeedbackNode.innerText = errorMessage;
         document.getElementById(formFieldId).parentNode.appendChild(invalidFeedbackNode);
+        allFormFieldsAreValid = false;
     }
 
     function formFieldValidationStatusReset(formFieldId) {
