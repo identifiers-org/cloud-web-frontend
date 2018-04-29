@@ -191,6 +191,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function disableAllFormItems() {
+        // TODO
+    }
+
     function initPage() {
         // TODO - Glue all the web page elements
         registryService = IdentifiersJS.getRegistry(prefixRegistrationWebServiceHost, prefixRegistrationWebServicePort);
