@@ -126,7 +126,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
             console.debug("Attaching validation listener to form field ID '" + formFieldId + "'");
             if ((formFieldId === prefixRegistrationFormItemRequesterName) || (formFieldId === prefixRegistrationFormItemRequesterEmail)) {
-                // TODO
+                document.getElementById(formFieldId).addEventListener('focusout', validateFormFieldRequesterListener);
             } else {
                 document.getElementById(formFieldId).addEventListener('focusout', validateFormFieldTriggerListener);
             }
