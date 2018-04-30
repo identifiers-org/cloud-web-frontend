@@ -192,7 +192,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formSubmissionHandlerSuccess(prefixRegistrationResponse) {
-        // TODO
+        displayMessageSuccess('Your Prefix Registration request has been submitted SUCCESSFULLY!');
     }
 
     function formSubmissionHandlerError(prefixRegistrationResponse) {
