@@ -126,10 +126,11 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function validateAllFields() {
         allFormFieldsAreValid = true;
+        console.debug("Validating all the form fields in one go");
         for (const [formFieldId, validationFunction] of Object.entries(validationMap)) {
             console.debug("Validating form field '" + formFieldId + "'");
             if ((formFieldId !== prefixRegistrationFormItemRequesterName) && (formFieldId !== prefixRegistrationFormItemRequesterEmail)) {
-                document.getElementById(formFieldId).addEventListener('focusout', validateFormField(formFieldId));
+                validateFormField(formFieldId);
             }
         }
         console.debug("Validating requester");
@@ -181,6 +182,7 @@ var PrefixRegistrationWebPageGlue = (function () {
                 }
             }, prefixRegistrationFormToPayload());
             } else {
+                // This will never get here, because validation is asynchronous, so the validation flag is not updated soon enough.
                 enableAllFormItems();
                 displayMessageError("Please, review the form and correct the errors.");
                 console.error("Submission FAILED!, the user will need to review the form");
@@ -196,7 +198,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formSubmissionHandlerError(prefixRegistrationResponse) {
-        displayMessageError("Please, review the Prefix Registration Submission regarding your Prefix Registration request, it failed with error '" + prefixRegistrationResponse.errorMessage + "'");
+        displayMessageError("Please, review the Prefix Registration Submission regarding your Prefix Registration request, it failed with error(s) \n" + prefixRegistrationResponse.errorMessage);
     }
 
     function formSubmissionReportReset() {
