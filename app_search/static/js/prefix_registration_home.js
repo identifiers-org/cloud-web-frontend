@@ -207,6 +207,10 @@ var PrefixRegistrationWebPageGlue = (function () {
         // TODO
     }
 
+    function displayMessageError(message) {
+        // TODO
+    }
+
     function reportAreaDisplayMessage(message, styleClass) {
         reportAreaReset();
         var reportAreaNode = document.getElementById(reportAreaId);
