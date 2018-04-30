@@ -208,7 +208,9 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function reportAreaReset() {
-        // TODO
+        var reportAreaNode = document.getElementById(reportAreaId);
+        reportAreaNode.setAttribute('hidden', true);
+        reportAreaNode.removeAttribute('class');
     }
 
     function disableAllFormItems() {
