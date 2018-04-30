@@ -200,7 +200,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formSubmissionReportReset() {
-        // TODO
+        clearDisplayedMessage();
     }
 
     function displayMessageSuccess(message) {
