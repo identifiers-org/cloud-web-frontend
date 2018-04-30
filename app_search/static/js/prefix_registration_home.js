@@ -204,7 +204,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function displayMessageSuccess(message) {
-        // TODO
+        reportAreaDisplayMessage(message, 'alert alert-secondary');
     }
 
     function displayMessageError(message) {
