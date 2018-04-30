@@ -196,7 +196,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function formSubmissionHandlerError(prefixRegistrationResponse) {
-        displayMessageError("Please, review the Prefix Registration Submission regarding your Prefix Registration submission, it failed with error '" + prefixRegistrationResponse.errorMessage + "'");
+        displayMessageError("Please, review the Prefix Registration Submission regarding your Prefix Registration request, it failed with error '" + prefixRegistrationResponse.errorMessage + "'");
     }
 
     function formSubmissionReportReset() {
