@@ -279,6 +279,8 @@ var PrefixRegistrationWebPageGlue = (function () {
         };
         // Attach the validation function to each form field
         attachValidationListeners();
+        // Attach registration listener
+        attachPrefixRegistrationSubmissionListener();
     }
 
     return {
