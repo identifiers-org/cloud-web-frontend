@@ -173,7 +173,7 @@ var PrefixRegistrationWebPageGlue = (function () {
             validateAllFields();
             if (allFormFieldsAreValid) {
                 registryService.requestPrefixRegistration(function processResponse(prefixRegistrationResponse) {
-                if (prefixRegistrationResponse.httpStatus !== 200) {
+                if (prefixRegistrationResponse.httpStatus === 200) {
                     formSubmissionHandlerSuccess(prefixRegistrationResponse);
                 } else {
                     formSubmissionHandlerError(prefixRegistrationResponse);
