@@ -204,7 +204,11 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function reportAreaDisplayMessage(message, styleClass) {
-        // TODO
+        reportAreaReset();
+        var reportAreaNode = document.getElementById(reportAreaId);
+        reportAreaNode.innerText = message;
+        reportAreaNode.setAttribute('class', styleClass);
+        reportAreaNode.removeAttribute('hidden');
     }
 
     function reportAreaReset() {
