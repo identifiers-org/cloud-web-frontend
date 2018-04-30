@@ -220,6 +220,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         var reportAreaNode = document.getElementById(reportAreaId);
         reportAreaNode.innerText = message;
         reportAreaNode.setAttribute('class', styleClass);
+        reportAreaNode.setAttribute('role', 'alert');
         reportAreaNode.removeAttribute('hidden');
     }
 
@@ -227,6 +228,7 @@ var PrefixRegistrationWebPageGlue = (function () {
         var reportAreaNode = document.getElementById(reportAreaId);
         reportAreaNode.setAttribute('hidden', true);
         reportAreaNode.removeAttribute('class');
+        reportAreaNode.removeAttribute('role');
     }
 
     function disableAllFormItems() {
