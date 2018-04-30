@@ -208,7 +208,7 @@ var PrefixRegistrationWebPageGlue = (function () {
     }
 
     function displayMessageError(message) {
-        // TODO
+        reportAreaDisplayMessage(message, 'alert alert-danger');
     }
 
     function clearDisplayedMessage() {
