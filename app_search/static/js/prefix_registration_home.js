@@ -166,7 +166,7 @@ var PrefixRegistrationWebPageGlue = (function () {
 
     function attachPrefixRegistrationSubmissionListener() {
         var submissionListener = function (event) {
-            console.info("Submission of prefix registration request.")
+            console.info("Submission of prefix registration request.");
             event.preventDefault();
             reportAreaReset();
             disableAllFormItems();
