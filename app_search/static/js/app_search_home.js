@@ -236,10 +236,10 @@ var AppSearchHomePageGlue = (function () {
             institutionInfoDiv.setAttribute('class', 'searchResultInstitution');
             institutionInfoDiv.innerText = resolvedResource.institution;
             // Recommendation Score / Index
-            recommendationIndexDiv = document.createElement('div');
-            recommendationIndexDiv.setAttribute('id', resolvedResource.id + "_recommendationIndex");
-            recommendationIndexDiv.setAttribute('class', 'searchResultRecommendationIndex');
-            recommendationIndexDiv.innerText = "Score: " + resolvedResource.recommendation.recommendationIndex;
+            //recommendationIndexDiv = document.createElement('div');
+            //recommendationIndexDiv.setAttribute('id', resolvedResource.id + "_recommendationIndex");
+            //recommendationIndexDiv.setAttribute('class', 'searchResultRecommendationIndex');
+            //recommendationIndexDiv.innerText = "Score: " + resolvedResource.recommendation.recommendationIndex;
             // Location Information
             locationDiv = document.createElement('div');
             locationDiv.setAttribute('id', resolvedResource.id + "_location");
@@ -249,7 +249,7 @@ var AppSearchHomePageGlue = (function () {
             resourceDiv.appendChild(accessUrlDiv);
             resourceDiv.appendChild(accessUrlPlainText);
             resourceDiv.appendChild(institutionInfoDiv);
-            resourceDiv.appendChild(recommendationIndexDiv);
+            //resourceDiv.appendChild(recommendationIndexDiv);
             resourceDiv.appendChild(locationDiv);
             // Append to results
             resultsDiv.appendChild(resourceDiv);
