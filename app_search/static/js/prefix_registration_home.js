@@ -182,7 +182,7 @@ var PrefixRegistrationWebPageGlue = (function () {
             }, prefixRegistrationFormToPayload());
             } else {
                 enableAllFormItems();
-                // TODO
+                displayMessageError("Please, review the form and correct the errors.");
                 console.error("Submission FAILED!, the user will need to review the form");
             }
             return false;
