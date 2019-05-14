@@ -1,9 +1,9 @@
-# 
+#
 # Project   : cloud-web-frontend
 # Timestamp : 11-04-2018 19:21
 # Author    : Manuel Bernal Llinares <mbdebian@gmail.com>
 # ---
-# 
+#
 
 """
 This module implements an Identifiers.org Python abstraction to access its web services.
@@ -77,9 +77,9 @@ class Recommendation:
 # Resolved Resource model
 class ResolvedResource:
     RESOLVED_RESOURCE_JSON_KEY_ID = 'id'
-    RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'resourcePrefix'
-    RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL = 'accessUrl'
-    RESOLVED_RESOURCE_JSON_KEY_INFO = 'info'
+    RESOLVED_RESOURCE_JSON_KEY_RESOURCE_PREFIX = 'providerCode'
+    RESOLVED_RESOURCE_JSON_KEY_ACCESS_URL = 'compactIdentifierResolvedUrl'
+    RESOLVED_RESOURCE_JSON_KEY_INFO = 'description'
     RESOLVED_RESOURCE_JSON_KEY_INSTITUTION = 'institution'
     RESOLVED_RESOURCE_JSON_KEY_LOCATION = 'location'
     RESOLVED_RESOURCE_JSON_KEY_OFFICIAL = 'official'
@@ -153,6 +153,7 @@ class ResolverService:
         return "{}://{}:{}".format(scheme, host, port)
 
     def resolve(self, compact_id, selector=None):
+        # TODO This client should use the RAW request mode
         endpoint = self.get_base_endpoint(host=self.host, port=self.port)
         if selector:
             endpoint = "{}/{}".format(endpoint, selector)
