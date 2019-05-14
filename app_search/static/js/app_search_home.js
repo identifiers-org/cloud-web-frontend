@@ -222,19 +222,19 @@ var AppSearchHomePageGlue = (function () {
             accessUrlDiv.setAttribute('id', resolvedResource.id + "_accessUrl");
             accessUrlDiv.setAttribute('class', 'searchResultAccessUrl');
             accessUrlLink = document.createElement('a');
-            accessUrlLink.setAttribute('href', resolvedResource.accessUrl);
-            accessUrlLink.innerText = resolvedResource.info;
+            accessUrlLink.setAttribute('href', resolvedResource.compactIdentifierResolvedUrl);
+            accessUrlLink.innerText = resolvedResource.description;
             accessUrlDiv.appendChild(accessUrlLink);
             // Access URL plain text
             accessUrlPlainText = document.createElement('div');
             accessUrlPlainText.setAttribute('id', resolvedResource.id + "_accessUrlPlainText");
             accessUrlPlainText.setAttribute('class', 'searchResultAccessUrlText');
-            accessUrlPlainText.innerText = resolvedResource.accessUrl;
+            accessUrlPlainText.innerText = resolvedResource.compactIdentifierResolvedUrl;
             // Resource institution information
             institutionInfoDiv = document.createElement('div');
             institutionInfoDiv.setAttribute('id', resolvedResource.id + "_institution");
             institutionInfoDiv.setAttribute('class', 'searchResultInstitution');
-            institutionInfoDiv.innerText = resolvedResource.institution;
+            institutionInfoDiv.innerText = resolvedResource.institution.name;
             // Recommendation Score / Index
             //recommendationIndexDiv = document.createElement('div');
             //recommendationIndexDiv.setAttribute('id', resolvedResource.id + "_recommendationIndex");
@@ -244,7 +244,7 @@ var AppSearchHomePageGlue = (function () {
             locationDiv = document.createElement('div');
             locationDiv.setAttribute('id', resolvedResource.id + "_location");
             locationDiv.setAttribute('class', 'searchResultLocation');
-            locationDiv.innerText = resolvedResource.location;
+            locationDiv.innerText = resolvedResource.location.countryCode;
             // Put everything together
             resourceDiv.appendChild(accessUrlDiv);
             resourceDiv.appendChild(accessUrlPlainText);
